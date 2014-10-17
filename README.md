@@ -5,7 +5,4 @@
 
 1. npm 
 2. compass
-
-
-1. run `gem install compass`
-2. party
+ - run `gem install compass`
