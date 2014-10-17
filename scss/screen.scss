@@ -2,6 +2,36 @@
 @import "animations";
 
 html {
-	color: pink;
+ background-color: #333;
+}
+
+
+.side-nav-mod {
+	width: 350px;
+	height: 100%;
 	padding: 10px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.main-content-mod {
+	margin-left: 350px;
+	background-color: #fff;
+	min-height: 1500px;
+	padding: 30px;
+}
+
+.preview-mod-inner {
+	min-height: 200px;
+	background-color: #ddd;
+	margin-bottom: 50px;
+}
+
+
+.form-mod {
+	min-height: 50px;
+	background-color: #fff;
+	margin-bottom: 25px;
 }
