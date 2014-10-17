@@ -310,16 +310,3 @@ html {
   color: pink;
   padding: 10px;
 }
-
-body {
-  -webkit-animation: anim-test 1s;
-  -moz-animation: anim-test 1s;
-  animation: anim-test 1s;
-}
-body:after {
-  content: 'Hello World!';
-  display: block;
-  text-align: center;
-  font-size: 70px;
-  padding: 300px 0;
-}
