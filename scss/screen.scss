@@ -1,0 +1,19 @@
+@import "base";
+@import "animations";
+
+html {
+	color: pink;
+	padding: 10px;
+}
+
+body {
+	// test animation
+	@include animation(anim-test 1s);
+	&:after {
+		content:'Hello World!';
+		display: block;
+		text-align: center;
+		font-size: 70px;
+		padding: 300px 0;
+	}
+}

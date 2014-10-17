@@ -1,0 +1,10 @@
+//  do some animations
+
+@include keyframes(anim-test) {
+  0% {
+    background: #000;
+  }
+  100%{
+    background: #fff;
+  }
+}
