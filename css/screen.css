@@ -404,7 +404,6 @@ html {
 .main-content-mod {
   margin-left: 350px;
   background-color: #f7f7f7;
-  min-height: 1500px;
   padding: 30px;
   margin-top: 70px;
 }
@@ -508,7 +507,6 @@ html {
 }
 
 .preview-mod {
-  min-height: 200px;
   border: solid 1px #dfdfdf;
   margin-bottom: 50px;
   background-color: #fff;
@@ -577,9 +575,67 @@ html {
   font-style: normal;
 }
 
+.preview-mod-facebook-mobile {
+  background-color: #D3D6DB;
+}
+
+.facebook-mobile {
+  width: 300px;
+  background: #fff;
+  padding: 10px 10px 50px;
+  border-radius: 2px;
+  position: relative;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.facebook-mobile-card {
+  background-color: #F7F7F7;
+  border: 1px solid #e1e8ed;
+}
+
+.facebook-mobile-hgroup {
+  padding: 10px;
+  font-family: Helvetica;
+}
+
+.facebook-mobile-title {
+  color: #494949;
+  margin-bottom: 5px;
+}
+
+.facebook-mobile-name {
+  font-weight: normal;
+  color: #A5A5A5;
+}
+
+.facebook-mobile-img {
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 280px;
+  height: 146px;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.facebook-mobile-img-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  border-top: 1px solid #e1e8ed;
+}
+
+.preview-mod-twitter {
+  background-color: #f5f8fa;
+}
+
 .twitter-desktop {
   width: 590px;
   padding: 13px 15px 15px;
+  background: #fff;
   border: 1px solid #e1e8ed;
 }
 
