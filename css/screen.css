@@ -496,6 +496,11 @@ html {
   background-color: #ddd;
 }
 
+.full-width {
+  width: 100%;
+  display: block;
+}
+
 .preview-title {
   padding: 10px;
   background: #ddd;
