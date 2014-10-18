@@ -307,7 +307,7 @@ button {
 }
 
 html {
-  background-color: #292929;
+  background-color: #353535;
 }
 
 .body {
@@ -320,17 +320,20 @@ html {
   left: 0;
   right: 0;
   height: 70px;
-  background-color: red;
+  background-color: #222;
+  z-index: 1;
 }
 
 .url-input-mod {
-  width: 80%;
-  margin: 10px 10%;
+  width: 60%;
+  margin: 10px 20%;
   height: 50px;
   position: relative;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.url-input-textarea {
+.url-input {
   border: 0;
   background-color: transparent;
   -webkit-box-shadow: none;
@@ -351,8 +354,11 @@ html {
   display: block;
   width: 100%;
   height: 100%;
+  padding: 13px;
+  font-size: 25px;
+  font-family: "Rokkitt", serif;
 }
-.url-input-textarea:focus {
+.url-input:focus {
   outline: 0;
 }
 
@@ -372,11 +378,13 @@ html {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 100px;
+  width: 110px;
   z-index: 1;
   display: block;
   float: right;
-  background-color: blue;
+  background-color: teal;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
 }
 .url-input-btn:focus {
   outline: 0;
@@ -399,13 +407,6 @@ html {
   min-height: 1500px;
   padding: 30px;
   margin-top: 70px;
-}
-
-.preview-mod-inner {
-  min-height: 200px;
-  border: solid 1px #dfdfdf;
-  margin-bottom: 50px;
-  background-color: #fff;
 }
 
 .side-nav-title {
@@ -493,4 +494,79 @@ html {
 }
 .submit-btn:hover {
   background-color: #ddd;
+}
+
+.preview-title {
+  padding: 10px;
+  background: #ddd;
+  margin-bottom: 20px;
+}
+
+.preview-mod {
+  min-height: 200px;
+  border: solid 1px #dfdfdf;
+  margin-bottom: 50px;
+  background-color: #fff;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.preview-mod-inner {
+  margin: 0 auto;
+}
+
+.facebook-desktop {
+  width: 496px;
+  background: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 12px;
+}
+
+.facebook-desktop-img {
+  width: 100%;
+  height: 276px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.facebook-desktop-card {
+  width: 470px;
+  -webkit-box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.1) inset, 0 1px 1px rgba(0, 0, 0, 0.05);
+  background: #fff;
+}
+
+.facebook-desktop-hgroup {
+  padding: 10px 12px;
+}
+
+.facebook-desktop-title {
+  font-family: Georgia, 'lucida grande',tahoma,verdana,arial,sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+
+.facebook-desktop-desc {
+  font-family: Helvetica;
+  line-height: 16px;
+  max-height: 80px;
+  overflow: hidden;
+  font-weight: normal;
+  margin-bottom: 7px;
+}
+
+.facebook-desktop-domain {
+  font-family: Helvetica;
+  color: #9197a3;
+  font-size: 11px;
+  line-height: 11px;
+  text-transform: uppercase;
+  font-style: normal;
 }
