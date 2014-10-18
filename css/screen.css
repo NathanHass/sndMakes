@@ -543,7 +543,7 @@ html {
 
 .facebook-desktop-card {
   width: 470px;
-  -webkit-box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.1) inset, 0 1px 1px rgba(0, 0, 0, 0.05);
+  border: solid 1px rgba(0, 0, 0, 0.1);
   background: #fff;
 }
 
@@ -647,4 +647,68 @@ html {
   height: 262px;
   background-position: 50% 50%;
   background-size: cover;
+}
+
+.google-desktop {
+  width: 512px;
+}
+
+.google-desktop-pair {
+  *zoom: 1;
+}
+.google-desktop-pair:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.google-desktop-pair > .art-bd,
+.google-desktop-pair > .txt-bd {
+  display: block;
+}
+.google-desktop-pair > .art-bd {
+  width: 134px;
+  float: left;
+  margin: 0;
+}
+.google-desktop-pair > .art-bd > img,
+.google-desktop-pair > .art-bd > .art {
+  width: 100%;
+  max-width: 100%;
+}
+.google-desktop-pair > .txt-bd {
+  margin-left: 144px;
+}
+
+.google-desktop-img {
+  height: 100px;
+}
+
+.google-desktop-text-bd {
+  font-family: arial, sans-serif;
+}
+
+.google-desktop-title {
+  color: #1a0dab;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 2px;
+}
+
+.google-desktop-name {
+  color: #006621;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+
+.google-desktop-time {
+  color: gray;
+  text-transform: none;
+}
+
+.google-desktop-desc {
+  color: #545454;
+  display: block;
+  font-weight: normal;
+  font-size: 13px;
 }
