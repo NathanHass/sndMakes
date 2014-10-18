@@ -88,14 +88,18 @@ $(function() {
 
 	function updateFacebook() {
 		$('.facebook-desktop-title').html(fbHeadline);
+		$('.facebook-mobile-title').html(fbHeadline);
 		var fbDescriptionDisplay = fbDescription;
 		if (fbDescription.length > 200) {fbDescriptionDisplay = fbDescription.substring(0, 196)+'...';}
 		$('.facebook-desktop-desc').html(fbDescriptionDisplay);
 		$('.facebook-desktop-domain').html(domain.toUpperCase());
+		$('.facebook-mobile-name').html(domain.toLowerCase());
 		if (fbImage != null && fbImage != '') {	
 			$('.facebook-desktop-img').attr('style', 'background-image: url('+fbImage+');');
+			$('.facebook-mobile-img').attr('style', 'background-image: url('+fbImage+');');
 		} else {
 			$('.facebook-desktop-img').attr('style', 'height:0px;border:0px;');
+			$('.facebook-mobile-img').attr('style', 'height:0px;border:0px;');
 		}
 	}
 
