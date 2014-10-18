@@ -5,7 +5,7 @@
 
 $(function() {
 
-	var title, headline, description, image, fbHeadline, fbDescription, fbImage, twitterHeadline, twitterDescription, twitterImage, siteURL, displayURL, domain, siteName;
+	var title, headline, description, image, fbHeadline, fbDescription, fbImage, twitterHeadline, twitterDescription, twitterImage, googleDescription, siteURL, displayURL, domain, siteName = '';
 
 	$('.url-input-btn').click(function(e) {
 
@@ -20,7 +20,7 @@ $(function() {
 				if (data != null) {
 
 					// set core metadata from data
-					title = data['title'], description = data['description'], image = data['image'];
+					title = data['title'], description = data['description'];
 					headline = (data['headline'] != null) ? headline = data['headline'] : headline = title;
 
 					// set facebook and twitter metadata
@@ -30,7 +30,12 @@ $(function() {
 					twitterHeadline = (data['twitterHeadline'] != null) ? twitterHeadline = data['twitterHeadline'] : twitterHeadline = headline;
 					twitterDescription = (data['twitterDescription'] != null) ? twitterDescription = data['twitterDescription'] : twitterDescription = description;
 					twitterImage = (data['twitterImage'] != null) ? twitterImage = data['twitterImage'] : twitterImage = fbImage;
-					if (twitterImage == null) {twitterImage = ''}
+					googleDescription = (data['eDescription'] != null) ? googleDescription = data['eDescription'] : googleDescription = description;
+					if (googleDescription.length > 140) {googleDescription = googleDescription.substring(0, 140)+'...';}
+					if (twitterImage == null) {twitterImage = ''; }
+					if (fbHeadline == null) { fbHeadline = ''; }
+					image = fbImage
+					if (image == null) { image = ''; }
 					
 					// parse domain
 					if (siteURL != null) { 
@@ -50,6 +55,7 @@ $(function() {
 					// update displays
 					updateFacebook();
 					updateTwitter();
+					updateGoogle();
 				}
 			}
 		});	
@@ -101,5 +107,12 @@ $(function() {
 			$('.twitter-desktop-img').attr('style', 'height:0px;border:0px;');			
 		}
 	}	
+
+	function updateGoogle() {
+		$('.google-desktop-img').attr('style', 'background-image: url('+image+');');
+		$('.google-desktop-title').html(headline);
+		$('.google-desktop-source').html(siteName.replace('.com',''));
+		$('.google-desktop-desc').html(googleDescription);
+	}
 
 });
