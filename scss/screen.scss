@@ -1,8 +1,15 @@
 @import "base";
 @import "animations";
 
+$sans: 'Montserrat', sans-serif;
+$serif: 'Rokkitt', serif;
+
 html {
- background-color: #333;
+ background-color: #292929;
+}
+
+.body {
+	font-family: $sans;
 }
 
 
@@ -14,24 +21,82 @@ html {
 	left: 0;
 	top: 0;
 	bottom: 0;
+	overflow: scroll;
 }
 
 .main-content-mod {
 	margin-left: 350px;
-	background-color: #fff;
+	background-color: #f7f7f7;
 	min-height: 1500px;
 	padding: 30px;
 }
 
 .preview-mod-inner {
 	min-height: 200px;
-	background-color: #ddd;
+	border: solid 1px #dfdfdf;
 	margin-bottom: 50px;
+	background-color: #fff;
 }
 
+.side-nav-title {
+	color: #fff;
+	font-size: 14px;
+	margin-bottom: 2px;
+	display: block;
+	font-weight: 400;
+	border-bottom: solid 1px #ddd;
+	margin-bottom: 10px;
+}
 
-.form-mod {
-	min-height: 50px;
+.side-nav-title {
+	color: #fff;
+	font-size: 14px;
+	margin-bottom: 2px;
+	display: block;
+	font-weight: 400;
+	border-bottom: solid 1px #ddd;
+	margin-bottom: 10px;
+}
+
+.side-nav-group {
+	margin-bottom: 35px;
+}
+
+// form stuff
+
+.form-label {
+	color: #fff;
+	font-size: 12px;
+	margin-bottom: 2px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #999;
+}
+
+.form {
+	margin-bottom: 15px;
+}
+
+.textarea {
+	@include input-default;
+	padding: 7px;
 	background-color: #fff;
-	margin-bottom: 25px;
+	margin-bottom: 5px;
+	width: 100%;
+	font-size: 16px;
+	font-family: $serif;
+}
+
+.submit-btn {
+	@include input-default;
+	background-color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 12px;
+	padding: 5px 8px 3px;
+	font-family: $serif;
+	&:hover {
+		background-color: #ddd;
+	}
 }
