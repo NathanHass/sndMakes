@@ -3,12 +3,20 @@
 	<head>
 		<title>Upstatement Sandbox</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script type="text/javascript" src="bower_components/modernizr/modernizr.js"></script>
+		<script type="text/javascript" src="/bower_components/modernizr/modernizr.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Rokkitt|Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/screen.css">
 	</head>
 
 	<body class="body">
+		<nav class="top-nav">
+			<form class="url-form">
+	            <div class="url-input-mod">
+	            	<input class="url-input" id="urlInput" name="url input" rows="3" placeholder="Enter URL Here"></input><br>
+					<button type="submit" class="url-input-btn">Submit</button>
+				</div> <!-- /.input -->
+			</form> <!-- /.form -->
+		</nav>
 		<div class="side-nav-mod">
 			<div class="side-nav-group">
 				<h3 class="side-nav-title">General</h3>
@@ -16,16 +24,25 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Title</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="title" name="textarea" rows="3" placeholder="title"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
 				</form> <!-- /.form -->
 				<form class="form">
 					<div class="form-row">
-			            <label class="form-label" for="textarea">H1</label>
+			            <label class="form-label" for="textarea">Headline - H1</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="headline" name="textarea" rows="3" placeholder="headline"></textarea><br>
+							<button type="submit" class="submit-btn">Submit</button>
+						</div> <!-- /.input -->
+					</div> <!-- /.form-row -->
+				</form> <!-- /.form -->
+				<form class="form">
+					<div class="form-row">
+			            <label class="form-label" for="textarea">description</label>
+			            <div class="input-mod">
+			            	<textarea class="textarea" id="description" name="textarea" rows="3" placeholder="description"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
@@ -37,7 +54,7 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Textarea</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="fbHeadline" name="textarea" rows="3" placeholder="fbHeadline"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
@@ -46,7 +63,7 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Textarea</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="fbDescription" name="textarea" rows="3" placeholder="fbDescription"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
@@ -55,7 +72,7 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Twitter OG Image</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="http://cdn1.vox-cdn.com/uploads/chorus_image/image/42119836/457325154.0_standard_1280.0.jpg"></textarea><br>
+			            	<textarea class="textarea" id="fbImage" name="textarea" rows="3" placeholder="fbImage"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
@@ -67,7 +84,7 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Textarea</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="twitterHeadline" name="textarea" rows="3" placeholder="fbHeadline"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
@@ -76,70 +93,91 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Textarea</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="twitterDescription" name="textarea" rows="3" placeholder="fbDescription"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
 				</form> <!-- /.form -->
+				<form class="form">
+					<div class="form-row">
+			            <label class="form-label" for="textarea">Twitter OG Image</label>
+			            <div class="input-mod">
+			            	<textarea class="textarea" id="twitterImage" name="textarea" rows="3" placeholder="fbImage"></textarea><br>
+							<button type="submit" class="submit-btn">Submit</button>
+						</div> <!-- /.input -->
+					</div> <!-- /.form-row -->
+				</form>
 			</div>
 		</div>
 		<div class="main-content-mod">
-			<div class="preview-outer-mod">
-				<h3 class="preview-title">Preview Type <i class="preview-type-percentage">00%</i></h3>
-				<div class="preview-mod-inner">
-					<h4 class="preview-title">Inject title here</h4>
-					<h5 class="preveiw-sub">Inject sub-title here</h5>
-					<img src="http://placekitten.com/g/200/300" class="preview-img">
-
+			<div class="preview-mod">
+			<h3 class="preview-title">Facebook Desktop <i class="preview-type-percentage">00%</i></h3>
+				<div class="preview-mod-inner facebook-desktop">
+					<img src="/img/facebook-desktop-head.jpg" class="full-width">
+					<div class="facebook-desktop-card">
+						<div class="facebook-desktop-img" style="background-image: url(http://placekitten.com/470/276);"></div>
+						<div class="facebook-desktop-hgroup">
+							<h4 class="facebook-desktop-title">Inject title here</h4>
+							<h5 class="facebook-desktop-desc">Inject sub-title here</h5>
+							<i class="facebook-desktop-domain">www.huffingtonpost.com</i>
+						</div>
+					</div>
+					<img src="/img/facebook-desktop-foot.jpg" class="full-width">
 				</div>
-				<h3 class="preview-title">Preview Type <i class="preview-type-percentage">00%</i></h3>
-				<div class="preview-mod-inner">
-					<h4 class="preview-title">Inject title here</h4>
-					<h5 class="preveiw-sub">Inject sub-title here</h5>
-					<img src="http://placekitten.com/g/200/300" class="preview-img">
-
+			</div>
+			<div class="preview-mod">
+				<h3 class="preview-title">Facebook Mobile <i class="preview-type-percentage">00%</i></h3>
+				<div class="preview-mod-inner facebook-mobile">
+					<h4 class="facebook-mobile-title">Inject title here</h4>
+					<h5 class="facebook-mobile-desc">Inject sub-title here</h5>
+					<img src="http://placekitten.com/g/200/300" class="facebook-mobile-img">
 				</div>
-				<h3 class="preview-title">Preview Type <i class="preview-type-percentage">00%</i></h3>
-				<div class="preview-mod-inner">
-					<h4 class="preview-title">Inject title here</h4>
-					<h5 class="preveiw-sub">Inject sub-title here</h5>
-					<img src="http://placekitten.com/g/200/300" class="preview-img">
-
+			</div>
+			<div class="preview-mod">
+				<h3 class="preview-title">Twitter Mobile Timeline <i class="preview-type-percentage">00%</i></h3>
+				<div class="preview-mod-inner twitter-mobile-tl">
+					<h4 class="twitter-mobile-tl-title">Inject title here</h4>
+					<h5 class="twitter-mobile-tl-desc">Inject sub-title here</h5>
+					<img src="http://placekitten.com/g/200/300" class="twitter-mobile-tl-img">
 				</div>
-				<h3 class="preview-title">Preview Type <i class="preview-type-percentage">00%</i></h3>
-				<div class="preview-mod-inner">
-					<h4 class="preview-title">Inject title here</h4>
-					<h5 class="preveiw-sub">Inject sub-title here</h5>
-					<img src="http://placekitten.com/g/200/300" class="preview-img">
-
+			</div>
+			<div class="preview-mod">
+				<h3 class="preview-title">Twitter Mobile Card <i class="preview-type-percentage">00%</i></h3>
+				<div class="preview-mod-inner twitter-mobile-card">
+					<h4 class="twitter-mobile-card-title">Inject title here</h4>
+					<h5 class="twitter-mobile-card-desc">Inject sub-title here</h5>
+					<img src="http://placekitten.com/g/200/300" class="twitter-mobile-card-img">
 				</div>
-				<h3 class="preview-title">Preview Type <i class="preview-type-percentage">00%</i></h3>
-				<div class="preview-mod-inner">
-					<h4 class="preview-title">Inject title here</h4>
-					<h5 class="preveiw-sub">Inject sub-title here</h5>
-					<img src="http://placekitten.com/g/200/300" class="preview-img">
-
+			</div>
+			<div class="preview-mod">
+				<h3 class="preview-title">Twitter Desktop <i class="preview-type-percentage">00%</i></h3>
+				<div class="preview-mod-inner twitter-desktop">
+					<h4 class="twitter-desktop-title">Inject title here</h4>
+					<h5 class="twitter-desktop-card">Inject sub-title here</h5>
+					<img src="http://placekitten.com/g/200/300" class="twitter-desktop-img">
 				</div>
-				<h3 class="preview-title">Preview Type <i class="preview-type-percentage">00%</i></h3>
-				<div class="preview-mod-inner">
-					<h4 class="preview-title">Inject title here</h4>
-					<h5 class="preveiw-sub">Inject sub-title here</h5>
-					<img src="http://placekitten.com/g/200/300" class="preview-img">
-
+			</div>
+			<div class="preview-mod">
+				<h3 class="preview-title">Google Desktop <i class="preview-type-percentage">00%</i></h3>
+				<div class="preview-mod-inner google-desktop">
+					<h4 class="google-desktop">Inject title here</h4>
+					<h5 class="google-desktop-desc">Inject sub-title here</h5>
+					<img src="http://placekitten.com/g/200/300" class="google-desktop-img">
 				</div>
-				<h3 class="preview-title">Preview Type <i class="preview-type-percentage">00%</i></h3>
-				<div class="preview-mod-inner">
-					<h4 class="preview-title">Inject title here</h4>
-					<h5 class="preveiw-sub">Inject sub-title here</h5>
-					<img src="http://placekitten.com/g/200/300" class="preview-img">
-
+			</div>
+			<div class="preview-mod">
+				<h3 class="preview-title">Google Mobile <i class="preview-type-percentage">00%</i></h3>
+				<div class="preview-mod-inner  google-mobile">
+					<h4 class="google-mobile-title">Inject title here</h4>
+					<h5 class="google-mobile-desc">Inject sub-title here</h5>
+					<img src="http://placekitten.com/g/200/300" class="google-mobile-img">
 				</div>
 			</div>
 
 		</div>
 	</body>
 
-	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="js/base.js"></script>
 
 </html>
