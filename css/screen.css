@@ -392,7 +392,6 @@ html {
 
 .side-nav-mod {
   width: 350px;
-  height: 100%;
   padding: 10px;
   position: fixed;
   left: 0;
@@ -737,6 +736,8 @@ html {
 
 .google-desktop-img {
   height: 100px;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .google-desktop-text-bd {
