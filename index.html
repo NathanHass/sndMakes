@@ -3,12 +3,20 @@
 	<head>
 		<title>Upstatement Sandbox</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script type="text/javascript" src="/components/modernizr/modernizr.js"></script>
+		<script type="text/javascript" src="/bower_components/modernizr/modernizr.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Rokkitt|Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/screen.css">
 	</head>
 
 	<body class="body">
+		<nav class="top-nav">
+			<form class="url-form">
+	            <div class="url-input-mod">
+	            	<textarea class="url-input-textarea" id="textarea" name="textarea" rows="3" placeholder="Enter URL Here"></textarea><br>
+					<button type="submit" class="url-input-btn">Submit</button>
+				</div> <!-- /.input -->
+			</form> <!-- /.form -->
+		</nav>
 		<div class="side-nav-mod">
 			<div class="side-nav-group">
 				<h3 class="side-nav-title">General</h3>
@@ -16,7 +24,7 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Title</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="title" name="textarea" rows="3" placeholder="title"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
@@ -25,7 +33,7 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Headline - H1</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="headline" name="textarea" rows="3" placeholder="headline"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
@@ -34,7 +42,7 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">description</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="description" name="textarea" rows="3" placeholder="description"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
@@ -46,7 +54,7 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Textarea</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="fbHeadline" name="textarea" rows="3" placeholder="fbHeadline"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
@@ -55,7 +63,7 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Textarea</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="fbDescription" name="textarea" rows="3" placeholder="fbDescription"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
@@ -64,7 +72,7 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Twitter OG Image</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="http://cdn1.vox-cdn.com/uploads/chorus_image/image/42119836/457325154.0_standard_1280.0.jpg"></textarea><br>
+			            	<textarea class="textarea" id="fbImage" name="textarea" rows="3" placeholder="fbImage"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
@@ -76,7 +84,7 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Textarea</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="twitterHeadline" name="textarea" rows="3" placeholder="fbHeadline"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
@@ -85,11 +93,20 @@
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Textarea</label>
 			            <div class="input-mod">
-			            	<textarea class="textarea" id="textarea" name="textarea" rows="3" placeholder="Static Textarea Input"></textarea><br>
+			            	<textarea class="textarea" id="twitterDescription" name="textarea" rows="3" placeholder="fbDescription"></textarea><br>
 							<button type="submit" class="submit-btn">Submit</button>
 						</div> <!-- /.input -->
 					</div> <!-- /.form-row -->
 				</form> <!-- /.form -->
+				<form class="form">
+					<div class="form-row">
+			            <label class="form-label" for="textarea">Twitter OG Image</label>
+			            <div class="input-mod">
+			            	<textarea class="textarea" id="twitterImage" name="textarea" rows="3" placeholder="fbImage"></textarea><br>
+							<button type="submit" class="submit-btn">Submit</button>
+						</div> <!-- /.input -->
+					</div> <!-- /.form-row -->
+				</form>
 			</div>
 		</div>
 		<div class="main-content-mod">
@@ -148,7 +165,7 @@
 		</div>
 	</body>
 
-	<script type="text/javascript" src="/components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="js/base.js"></script>
 
 </html>

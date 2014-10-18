@@ -12,6 +12,43 @@ html {
 	font-family: $sans;
 }
 
+// topper
+.top-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
+	background-color: red;
+}
+
+.url-input-mod {
+	width: 80%;
+	margin: 10px 10%;
+	height: 50px;
+	position: relative;
+}
+
+.url-input-textarea {
+	@include input-default;
+	@include absolute(0 0 0 0);
+	background-color: #fff;
+	display: block;
+	@include size(100%);
+}
+
+.url-input-btn {
+	@include input-default;
+	@include absolute(0 0 0 n);
+	width: 100px;
+	z-index: 1;
+	display: block;
+	float: right;
+	background-color: blue;
+}
+
+
+// side nav
 
 .side-nav-mod {
 	width: 350px;
@@ -19,7 +56,7 @@ html {
 	padding: 10px;
 	position: fixed;
 	left: 0;
-	top: 0;
+	top: 80px;
 	bottom: 0;
 	overflow: scroll;
 }
@@ -29,6 +66,7 @@ html {
 	background-color: #f7f7f7;
 	min-height: 1500px;
 	padding: 30px;
+	margin-top: 70px;
 }
 
 .preview-mod-inner {
