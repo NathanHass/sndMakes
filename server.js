@@ -90,7 +90,7 @@ var parseURL = function(testUrl, res){
           }
 
           eTitle = objs[0]['title'];
-          eImage = util.inspect(objs[0]['images'][0]['url']);
+          eImage = objs[0]['images'][0]['url'];
           eDescription = objs[0]['description'];
 
 
