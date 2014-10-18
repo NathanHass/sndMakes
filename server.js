@@ -71,7 +71,9 @@ var parseURL = function(testUrl, res){
 
       //headline
       if($('h1')['length']>0){
-        headline = $('h1')[0]['children'][0]['data'];
+        if($('h1')[0]['children'].length>0){
+         headline = $('h1')[0]['children'][0]['data'];
+        }
       }
 
 
@@ -96,9 +98,8 @@ var parseURL = function(testUrl, res){
           }
           eDescription = objs[0]['description'];
 
-         if(objs[0]['content'].length >0){
+         if(objs[0]['content']!=null){
             eBodyPreview = objs[0]['content'].slice(0,500).replace(/<(?:.|\n)*?>/gm, '');;
-            console.log(eBodyPreview);
           }
 
 
