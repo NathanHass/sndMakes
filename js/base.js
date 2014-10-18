@@ -20,7 +20,8 @@ $(function() {
 				if (data != null) {
 
 					// set core metadata from data
-					title = data['title'], headline = data['headline'], description = data['description'], image = data['image'];
+					title = data['title'], description = data['description'], image = data['image'];
+					headline = (data['headline'] != null) ? headline = data['headline'] : headline = title;
 
 					// set facebook and twitter metadata
 					fbHeadline = (data['fbHeadline'] != null) ? fbHeadline = data['fbHeadline'] : fbHeadline = title;
@@ -54,35 +55,51 @@ $(function() {
 		});	
 	});
 
-	$('.general-submit').click(function(e) {
-		e.preventDefault();
-		headline = $('#headline').val(), description = $('#description').val(), image = $('#image').val();
-	})
+	$('#fbHeadline').keydown(function() {
+		fbHeadline = $(this).val();
+		updateFacebook();
+	});
+	$('#fbDescription').keydown(function() {
+		fbDescription = $(this).val();
+		updateFacebook();
+	});
+	$('#twitterHeadline').keydown(function() {
+		twitterHeadline = $(this).val();
+		updateTwitter();
+	});
 
 	$('.fb-submit').click(function(e) {
 		e.preventDefault();
-		fbHeadline = $('#fbHeadline').val(), fbDescription = $('#fbDescription').val(), fbImage = $('#fbImage').val();
+		fbImage = $('#fbImage').val();
 		updateFacebook();
 	})
 
 	$('.twitter-submit').click(function(e) {
 		e.preventDefault();
-		twitterHeadline = $('#twitterHeadline').val(), twitterDescription = $('#twitterDescription').val(), twitterImage = $('#twitterImage').val();
+		twitterImage = $('#twitterImage').val();
 		updateTwitter();
-	})	
+	})						
 
 	function updateFacebook() {
-		$('.facebook-desktop-img').attr('style', 'background-image: url('+fbImage+');');
 		$('.facebook-desktop-title').html(fbHeadline);
 		var fbDescriptionDisplay = fbDescription;
 		if (fbDescription.length > 200) {fbDescriptionDisplay = fbDescription.substring(0, 196)+'...';}
 		$('.facebook-desktop-desc').html(fbDescriptionDisplay);
-		$('.facebook-desktop-domain').html(domain.toUpperCase());	
+		$('.facebook-desktop-domain').html(domain.toUpperCase());
+		if (fbImage != null && fbImage != '') {	
+			$('.facebook-desktop-img').attr('style', 'background-image: url('+fbImage+');');
+		} else {
+			$('.facebook-desktop-img').attr('style', 'height:0px;border:0px;');
+		}
 	}
 
 	function updateTwitter() {
 		$('.twitter-desktop-title').html(twitterHeadline+' <a href="'+siteURL+'">'+displayURL.substring(0,27)+'...</a>');
-		$('.twitter-desktop-img').attr('style', 'background-image: url('+twitterImage+');');
+		if (twitterImage != null && twitterImage != '') {			
+			$('.twitter-desktop-img').attr('style', 'background-image: url('+twitterImage+');');
+		} else {
+			$('.twitter-desktop-img').attr('style', 'height:0px;border:0px;');			
+		}
 	}	
 
 });
