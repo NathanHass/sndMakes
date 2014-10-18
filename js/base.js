@@ -19,6 +19,8 @@ $(function() {
 			success: function(data) {
 				if (data != null) {
 
+					title = null, headline = null, description = null, image = null, fbHeadline = null, fbDescription = null, fbImage = null, twitterHeadline = null, twitterDescription = null, twitterImage = null, googleDescription = null, displayURL = null, domain = null, siteName = '';					
+
 					// set core metadata from data
 					title = data['title'], description = data['description'];
 					headline = (data['headline'] != null) ? headline = data['headline'] : headline = title;
