@@ -21,12 +21,13 @@ var parseURL = function(testUrl, res){
       var meta = $('meta');
       var keys = Object.keys(meta);
 
-      var title, headline, description, fbHeadline, fbDescription, fbImage, twitterHeadline, twitterDescription, twitterImage, bodyText, eTitle, eDescription, eImage;
+      var title, headline, description, fbHeadline, fbDescription, fbImage, twitterHeadline, twitterDescription, twitterImage, eBodyPreview, eTitle, eDescription, eImage;
 
       keys.forEach(function(key){
 
         //description
         if(meta[key].attribs){
+         // console.log(meta[key].attribs);
           if(meta[key].attribs.name =='description'){
             description = meta[key].attribs.content;
           }
@@ -47,15 +48,15 @@ var parseURL = function(testUrl, res){
             fbImage = meta[key].attribs.content;
           }
 
-          if(meta[key].attribs.property =='twitter:title'){
+          if(meta[key].attribs.name=='twitter:title'){
             twitterHeadline = meta[key].attribs.content;
           }
 
-          if(meta[key].attribs.property =='twitter:description'){
+          if(meta[key].attribs.name =='twitter:description'){
             twitterDescription = meta[key].attribs.content;
           }
 
-          if(meta[key].attribs.property =='twitter:image'){
+          if(meta[key].attribs.name =='twitter:image:src'){
             twitterImage = meta[key].attribs.content;
           }
 
@@ -64,14 +65,16 @@ var parseURL = function(testUrl, res){
       });
 
       //title
-      try{
+      if($('title')['length']>0){
         title = $('title')['0']['children'][0]['data'];
-      }catch(e){ console.log('err title') }
+      }
 
       //headline
-      try{
-        headline = $('h1')[0]['children'][0]['data'];
-      } catch(e) {console.log('err headline')}
+      if($('h1')['length']>0){
+        if($('h1')[0]['children'].length>0){
+         headline = $('h1')[0]['children'][0]['data'];
+        }
+      }
 
 
       //embedly
@@ -90,8 +93,14 @@ var parseURL = function(testUrl, res){
           }
 
           eTitle = objs[0]['title'];
-          eImage = objs[0]['images'][0]['url'];
+          if(objs[0]['images'].length >0){
+            eImage = objs[0]['images'][0]['url'];
+          }
           eDescription = objs[0]['description'];
+
+         if(objs[0]['content']!=null){
+            eBodyPreview = objs[0]['content'].slice(0,500).replace(/<(?:.|\n)*?>/gm, '');;
+          }
 
 
 
@@ -122,7 +131,8 @@ var parseURL = function(testUrl, res){
             'twitterImage' : twitterImage,
             'eTitle' : eTitle,
             'eDescription' : eDescription,
-            'eImage' : eImage
+            'eImage' : eImage,
+            'eBodyPreview' : eBodyPreview
           }
           res.end(JSON.stringify(data));
         });
