@@ -18,7 +18,7 @@ $(function() {
 				"twitterImage":"http://cdn1.vox-cdn.com/uploads/chorus_image/image/41948964/N6-moreeverything-1600.0.0_cinema_1200.0.jpg"};
 	
 	// set core metadata from data
-	var title = data['title'], headline = data['headline'], description = data['description'], image = data['image'], domain, siteName;
+	var title = data['title'], headline = data['headline'], description = data['description'], image = data['image'], url, domain, siteName;
 
 	// set facebook and twitter metadata
 	var fbHeadline = (fbHeadline === null) ? fbHeadline = title : fbHeadline = data['fbHeadline'];
@@ -36,9 +36,11 @@ $(function() {
 		e.preventDefault();
 
 		// parse domain
-		domain = $('.url-input').val();
-		if (domain != null) { 
-			domain = domain.replace('http://','');
+		url = $('.url-input').val();
+		if (url != null) { 
+			url = url.replace('http://','');
+			url = url.replace('www.','');
+			domain = url;
 			if (domain.indexOf('/') > 0) { domain = domain.substring(0, domain.indexOf('/'))}
 		}
 
@@ -51,6 +53,7 @@ $(function() {
 
 		// update displays
 		updateFacebook();
+		updateTwitter();
 	
 	});
 
@@ -60,6 +63,12 @@ $(function() {
 		updateFacebook();
 	})
 
+	$('.twitter-submit').click(function(e) {
+		e.preventDefault();
+		twitterHeadline = $('#twitterHeadline').val(), twitterDescription = $('#twitterDescription').val(), twitterImage = $('#twitterImage').val();
+		updateTwitter();
+	})	
+
 	function updateFacebook() {
 		$('.facebook-desktop-img').attr('style', 'background-image: url('+fbImage+');');
 		$('.facebook-desktop-title').html(fbHeadline);
@@ -68,5 +77,10 @@ $(function() {
 		$('.facebook-desktop-desc').html(fbDescriptionDisplay);
 		$('.facebook-desktop-domain').html(domain.toUpperCase());	
 	}
+
+	function updateTwitter() {
+		$('.twitter-desktop-title').html(twitterHeadline+' <a href="'+url+'">'+url.substring(0,27)+'...</a>');
+		$('.twitter-desktop-img').attr('style', 'background-image: url('+twitterImage+');');
+	}	
 
 });
