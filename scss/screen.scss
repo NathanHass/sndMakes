@@ -5,7 +5,7 @@ $sans: 'Montserrat', sans-serif;
 $serif: 'Rokkitt', serif;
 
 html {
- background-color: #292929;
+ background-color: #353535;
 }
 
 .body {
@@ -19,32 +19,39 @@ html {
 	left: 0;
 	right: 0;
 	height: 70px;
-	background-color: red;
+	background-color: #222;
 }
 
 .url-input-mod {
-	width: 80%;
-	margin: 10px 10%;
+	width: 60%;
+	margin: 10px 20%;
 	height: 50px;
 	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
 }
 
-.url-input-textarea {
+.url-input {
 	@include input-default;
 	@include absolute(0 0 0 0);
 	background-color: #fff;
 	display: block;
 	@include size(100%);
+	padding: 13px;
+	font-size: 25px;
+	font-family: $serif;
 }
 
 .url-input-btn {
 	@include input-default;
 	@include absolute(0 0 0 n);
-	width: 100px;
+	width: 110px;
 	z-index: 1;
 	display: block;
 	float: right;
-	background-color: blue;
+	background-color: teal;
+	color: #fff;
+	font-family: $sans;
 }
 
 
