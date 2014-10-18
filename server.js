@@ -100,7 +100,6 @@ var parseURL = function(testUrl, res){
 
          if(objs[0]['content']!=null){
             eBodyPreview = objs[0]['content'].slice(0,500).replace(/<(?:.|\n)*?>/gm, '');;
-            console.log(eBodyPreview);
           }
 
 
