@@ -191,7 +191,7 @@ html {
 
 .facebook-desktop-card {
 	width: 470px;
-	-webkit-box-shadow: 0 0 0 1.5px rgba(0, 0, 0, .1) inset, 0 1px 1px rgba(0, 0, 0, .05);
+	border: solid 1px rgba(0, 0, 0, .1);
 	background: #fff;
 }
 
@@ -286,4 +286,47 @@ html {
 	height: 262px;
 	background-position: 50% 50%;
 	background-size: cover;
+}
+
+// google desktop
+
+.google-desktop {
+	width: 512px;
+}
+
+.google-desktop-pair {
+	@include pair(134px, 10px, top);
+}
+
+.google-desktop-img {
+	height: 100px;
+}
+
+.google-desktop-text-bd {
+	font-family: arial, sans-serif;
+}
+
+.google-desktop-title {
+	color: rgb(26, 13, 171);
+	font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 2px;
+}
+
+.google-desktop-name {
+	color: #006621;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-bottom: 6px;
+}
+.google-desktop-time {
+	color: rgb(128, 128, 128);
+	text-transform: none;
+}
+
+.google-desktop-desc {
+	color: rgb(84, 84, 84);
+	display: block;
+	font-weight: normal;
+	font-size: 13px;
 }
