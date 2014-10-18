@@ -27,6 +27,7 @@ var parseURL = function(testUrl, res){
 
         //description
         if(meta[key].attribs){
+         // console.log(meta[key].attribs);
           if(meta[key].attribs.name =='description'){
             description = meta[key].attribs.content;
           }
@@ -47,15 +48,15 @@ var parseURL = function(testUrl, res){
             fbImage = meta[key].attribs.content;
           }
 
-          if(meta[key].attribs.property =='twitter:title'){
+          if(meta[key].attribs.name=='twitter:title'){
             twitterHeadline = meta[key].attribs.content;
           }
 
-          if(meta[key].attribs.property =='twitter:description'){
+          if(meta[key].attribs.name =='twitter:description'){
             twitterDescription = meta[key].attribs.content;
           }
 
-          if(meta[key].attribs.property =='twitter:image'){
+          if(meta[key].attribs.name =='twitter:image:src'){
             twitterImage = meta[key].attribs.content;
           }
 
@@ -64,14 +65,14 @@ var parseURL = function(testUrl, res){
       });
 
       //title
-      try{
+      if($('title')['length']>0){
         title = $('title')['0']['children'][0]['data'];
-      }catch(e){ console.log('err title') }
+      }
 
       //headline
-      try{
+      if($('h1')['length']>0){
         headline = $('h1')[0]['children'][0]['data'];
-      } catch(e) {console.log('err headline')}
+      }
 
 
       //embedly
@@ -90,7 +91,9 @@ var parseURL = function(testUrl, res){
           }
 
           eTitle = objs[0]['title'];
-          eImage = util.inspect(objs[0]['images'][0]['url']);
+          if(objs[0]['images'].length >0){
+            eImage = objs[0]['images'][0]['url'];
+          }
           eDescription = objs[0]['description'];
 
 
