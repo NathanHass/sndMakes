@@ -581,7 +581,7 @@ html {
 .facebook-mobile {
   width: 300px;
   background: #fff;
-  padding: 10px 10px 50px;
+  padding: 10px 10px 53px;
   border-radius: 2px;
   position: relative;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -702,6 +702,67 @@ html {
   height: 262px;
   background-position: 50% 50%;
   background-size: cover;
+}
+
+.twitter-mobile-card {
+  width: 320px;
+  border-right: solid 1px #ddd;
+  border-left: solid 1px #ddd;
+  padding: 0 10px;
+}
+
+.twitter-mobile-card-img {
+  width: 300px;
+  height: 141px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.twitter-mobile-card-title {
+  margin-bottom: 5px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #292f33;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.twitter-mobile-card-source {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #93A2AD;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.twitter-mobile-card-desc {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #292f33;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.twitter-mobile-card-name-hgroup {
+  margin-bottom: 8px;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.twitter-mobile-card-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: #ddd;
+  display: block;
+  float: left;
+  margin-right: 5px;
+}
+
+.twitter-mobile-card-name {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: block;
+  font-weight: 700;
+  float: left;
+  line-height: 24px;
 }
 
 .google-desktop {
