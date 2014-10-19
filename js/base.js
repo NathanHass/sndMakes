@@ -90,7 +90,9 @@ $(function() {
 
 	function updateFacebook() {
 		$('.facebook-desktop-title').html(fbHeadline);
-		$('.facebook-mobile-title').html(fbHeadline);
+		var fbHeadlineDisplay = fbHeadline;
+		if (fbHeadlineDisplay.length > 80) {fbHeadlineDisplay = fbHeadlineDisplay.substring(0, 80)+'...';}
+		$('.facebook-mobile-title').html(fbHeadlineDisplay);
 		var fbDescriptionDisplay = fbDescription;
 		if (fbDescription.length > 200) {fbDescriptionDisplay = fbDescription.substring(0, 196)+'...';}
 		$('.facebook-desktop-desc').html(fbDescriptionDisplay);
@@ -106,7 +108,9 @@ $(function() {
 	}
 
 	function updateTwitter() {
-		$('.twitter-desktop-title').html(twitterHeadline+' <a href="'+siteURL+'">'+displayURL.substring(0,27)+'...</a>');
+		var twitterDescriptionDisplay = twitterHeadline;
+		if (twitterDescriptionDisplay.length > 113) {twitterDescriptionDisplay = twitterDescriptionDisplay.substring(0, 113);}
+		$('.twitter-desktop-title').html(twitterDescriptionDisplay+' <a href="'+siteURL+'">'+displayURL.substring(0,27)+'...</a>');
 		if (twitterImage != null && twitterImage != '') {			
 			$('.twitter-desktop-img').attr('style', 'background-image: url('+twitterImage+');');
 		} else {
