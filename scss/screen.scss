@@ -465,6 +465,8 @@ html {
 .google-mobile-img {
 	width: 116px;
 	height: 156px;
+	background-size: cover;
+	background-position: 50% 50%;
 }
 
 .google-mobile-card {
@@ -482,7 +484,7 @@ html {
 .google-mobile-title {
 	color: rgb(26, 13, 171);
 	font-weight: normal;
-	font-size: 18px;
+	font-size: 19px;
 }
 
 .google-mobile-source {
@@ -490,8 +492,6 @@ html {
 	font-weight: normal;
 }
 
-.google-mobile-name {
-}
 
 .google-mobile-time {
 	color: rgb(128, 128, 128);
