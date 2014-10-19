@@ -445,3 +445,54 @@ html {
 	font-weight: normal;
 	font-size: 13px;
 }
+
+//  google mobile
+
+.google-mobile-preview {
+	background-color: #EEEEEE;
+}
+
+.google-mobile {
+	width:  300px;
+	background-color: #fff;
+	border: solid 1px #EBEBEB;
+	border-radius: 2px;
+	overflow: hidden;
+	display: block;
+	@include box-shadow(0 2px 2px rgba(0,0,0,.05));
+}
+
+.google-mobile-img {
+	width: 116px;
+	height: 156px;
+}
+
+.google-mobile-card {
+	@include pair(116px, 10px, top, right);
+}
+
+.google-card-mobile-hgroup {
+	float: left;
+	@include clearfix;
+	width: 182px;
+	padding: 10px;
+	font-family: arial, sans-serif;
+}
+
+.google-mobile-title {
+	color: rgb(26, 13, 171);
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.google-mobile-source {
+	color: #006621;
+	font-weight: normal;
+}
+
+.google-mobile-name {
+}
+
+.google-mobile-time {
+	color: rgb(128, 128, 128);
+}

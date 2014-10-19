@@ -832,3 +832,74 @@ html {
   font-weight: normal;
   font-size: 13px;
 }
+
+.google-mobile-preview {
+  background-color: #EEEEEE;
+}
+
+.google-mobile {
+  width: 300px;
+  background-color: #fff;
+  border: solid 1px #EBEBEB;
+  border-radius: 2px;
+  overflow: hidden;
+  display: block;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+.google-mobile-img {
+  width: 116px;
+  height: 156px;
+}
+
+.google-mobile-card {
+  *zoom: 1;
+}
+.google-mobile-card:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.google-mobile-card > .art-bd,
+.google-mobile-card > .txt-bd {
+  display: block;
+}
+.google-mobile-card > .art-bd {
+  width: 116px;
+  float: right;
+  margin: 0;
+}
+.google-mobile-card > .art-bd > img,
+.google-mobile-card > .art-bd > .art {
+  width: 100%;
+  max-width: 100%;
+}
+.google-mobile-card > .txt-bd {
+  margin-right: 126px;
+}
+
+.google-card-mobile-hgroup {
+  float: left;
+  overflow: hidden;
+  *zoom: 1;
+  width: 182px;
+  padding: 10px;
+  font-family: arial, sans-serif;
+}
+
+.google-mobile-title {
+  color: #1a0dab;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.google-mobile-source {
+  color: #006621;
+  font-weight: normal;
+}
+
+.google-mobile-time {
+  color: gray;
+}
