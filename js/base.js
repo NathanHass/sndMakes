@@ -143,8 +143,11 @@ $(function() {
 
 	function updateGoogle() {
 		$('.google-desktop-img').attr('style', 'background-image: url('+image+');');
+		$('.google-mobile-img').attr('style', 'background-image: url('+image+');');
 		$('.google-desktop-title').html(headline);
+		$('.google-mobile-title').html(headline);
 		$('.google-desktop-source').html(siteName.replace('.com',''));
+		$('.google-mobile-source').html(siteName.replace('.com',''));
 		$('.google-desktop-desc').html(googleDescription);
 	}
 
