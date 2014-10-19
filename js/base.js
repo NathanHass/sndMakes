@@ -48,8 +48,8 @@ $(function() {
 					}
 
 					// parse site name
-					if (title.indexOf('-') > 0 && title.length > title.indexOf('-')+3) { siteName = title.substring(title.indexOf('-')+2); }
-					else if (title.indexOf('|') > 0 && title.length > title.indexOf('-')+3) { siteName = title.substring(title.indexOf('|')+2); }
+					if (title.lastIndexOf('-') > 0 && title.length > title.lastIndexOf('-')+3) { siteName = title.substring(title.lastIndexOf('-')+2); }
+					else if (title.lastIndexOf('|') > 0 && title.length > title.lastIndexOf('-')+3) { siteName = title.substring(title.lastIndexOf('|')+2); }
 
 					// set text fields
 					$('#title').val(title), $('#headline').val(headline), $('#description').val(description), $('#fbHeadline').val(fbHeadline), $('#fbDescription').val(fbDescription), $('#fbImage').val(fbImage), $('#twitterHeadline').val(twitterHeadline), $('#twitterDescription').val(twitterDescription), $('#twitterImage').val(twitterImage);
