@@ -154,7 +154,7 @@ $(function() {
 		$('.google-desktop-title').html(headline);
 		$('.google-mobile-title').html(headline);
 		$('.google-desktop-source').html(siteName.replace('.com',''));
-		$('.google-mobile-source').html(siteName.replace('.com',''));
+		$('.google-mobile-name').html(siteName.replace('.com',''));
 		$('.google-desktop-desc').html(googleDescription);
 	}
 
