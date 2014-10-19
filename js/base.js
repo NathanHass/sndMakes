@@ -33,7 +33,7 @@ $(function() {
 					twitterDescription = (data['twitterDescription'] != null) ? twitterDescription = data['twitterDescription'] : twitterDescription = description;
 					twitterImage = (data['twitterImage'] != null) ? twitterImage = data['twitterImage'] : twitterImage = fbImage;
 					googleDescription = (data['eDescription'] != null) ? googleDescription = data['eDescription'] : googleDescription = description;
-					if (googleDescription.length > 140) {googleDescription = googleDescription.substring(0, 140)+'...';}
+					if (googleDescription != null && googleDescription.length > 140) {googleDescription = googleDescription.substring(0, 140)+'...';}
 					if (twitterImage == null) {twitterImage = ''; }
 					if (fbHeadline == null) { fbHeadline = ''; }
 					image = fbImage
@@ -48,8 +48,8 @@ $(function() {
 					}
 
 					// parse site name
-					if (title.indexOf('-') > 0 && title.length > title.indexOf('-')+3) { siteName = title.substring(title.indexOf('-')+2); }
-					else if (title.indexOf('|') > 0 && title.length > title.indexOf('-')+3) { siteName = title.substring(title.indexOf('|')+2); }
+					if (title.lastIndexOf('-') > 0 && title.length > title.lastIndexOf('-')+3) { siteName = title.substring(title.lastIndexOf('-')+2); }
+					else if (title.lastIndexOf('|') > 0 && title.length > title.lastIndexOf('-')+3) { siteName = title.substring(title.lastIndexOf('|')+2); }
 
 					// set text fields
 					$('#title').val(title), $('#headline').val(headline), $('#description').val(description), $('#fbHeadline').val(fbHeadline), $('#fbDescription').val(fbDescription), $('#fbImage').val(fbImage), $('#twitterHeadline').val(twitterHeadline), $('#twitterDescription').val(twitterDescription), $('#twitterImage').val(twitterImage);
@@ -103,10 +103,10 @@ $(function() {
 	function updateFacebook() {
 		$('.facebook-desktop-title').html(fbHeadline);
 		var fbHeadlineDisplay = fbHeadline;
-		if (fbHeadlineDisplay.length > 80) {fbHeadlineDisplay = fbHeadlineDisplay.substring(0, 80)+'...';}
+		if (fbHeadlineDisplay != null && fbHeadlineDisplay.length > 80) {fbHeadlineDisplay = fbHeadlineDisplay.substring(0, 80)+'...';}
 		$('.facebook-mobile-title').html(fbHeadlineDisplay);
 		var fbDescriptionDisplay = fbDescription;
-		if (fbDescription.length > 200) {fbDescriptionDisplay = fbDescription.substring(0, 196)+'...';}
+		if (fbDescriptionDisplay != null && fbDescription.length > 200) {fbDescriptionDisplay = fbDescription.substring(0, 196)+'...';}
 		$('.facebook-desktop-desc').html(fbDescriptionDisplay);
 		$('.facebook-desktop-domain').html(domain.toUpperCase());
 		$('.facebook-mobile-name').html(domain.toLowerCase());
@@ -121,9 +121,9 @@ $(function() {
 
 	function updateTwitter() {
 		var twitterHeadlineDisplay = twitterHeadline;
-		if (twitterHeadlineDisplay.length > 113) {twitterHeadlineDisplay = twitterHeadlineDisplay.substring(0, 113);}
+		if (twitterHeadlineDisplay != null && twitterHeadlineDisplay.length > 113) {twitterHeadlineDisplay = twitterHeadlineDisplay.substring(0, 113);}
 		$('.twitter-desktop-title').html(twitterHeadlineDisplay+' <a href="'+siteURL+'">'+displayURL.substring(0,27)+'...</a>');
-		if (twitterHeadline.length > 140) {twitterHeadlineDisplay = twitterHeadline.substring(0, 140);} else { twitterHeadlineDisplay = twitterHeadline; }
+		if (twitterHeadline != null && twitterHeadline.length > 140) {twitterHeadlineDisplay = twitterHeadline.substring(0, 140);} else { twitterHeadlineDisplay = twitterHeadline; }
 		$('.twitter-mobile-card-title').html(twitterHeadlineDisplay);		
 		if (twitterImage != null && twitterImage != '') {			
 			$('.twitter-desktop-img').attr('style', 'background-image: url('+twitterImage+');');
@@ -137,14 +137,24 @@ $(function() {
 		$('.twitter-mobile-card-source-name').html(twitterDisplaySource);
 		$('.twitter-mobile-card-source-handle').html(' @'+twitterDisplaySource.replace(' ','').toLowerCase());
 		var twitterDescriptionDisplay = twitterDescription;
-		if (twitterDescriptionDisplay.length > 200) {twitterDescriptionDisplay = twitterDescriptionDisplay.substring(0, 196)+'...';}		
+		if (twitterDescriptionDisplay != null && twitterDescriptionDisplay.length > 200) {twitterDescriptionDisplay = twitterDescriptionDisplay.substring(0, 196)+'...';}		
 		$('.twitter-mobile-card-desc').html(twitterDescriptionDisplay);
 	}	
 
 	function updateGoogle() {
-		$('.google-desktop-img').attr('style', 'background-image: url('+image+');');
+		if (image != null && image != '') {
+			$('.google-desktop-img').attr('style', 'background-image: url('+image+');');
+			$('.google-mobile-img').attr('style', 'background-image: url('+image+');');
+			$('.google-desktop-pair .art-bd').attr('style', 'display:block;');
+			$('.google-desktop-pair .google-desktop-text-bd').attr('style', 'margin-left:144px;');			
+		} else {
+			$('.google-desktop-pair .art-bd').attr('style', 'display:none;');
+			$('.google-desktop-pair .google-desktop-text-bd').attr('style', 'margin-left:0px;');			
+		}
 		$('.google-desktop-title').html(headline);
+		$('.google-mobile-title').html(headline);
 		$('.google-desktop-source').html(siteName.replace('.com',''));
+		$('.google-mobile-source').html(siteName.replace('.com',''));
 		$('.google-desktop-desc').html(googleDescription);
 	}
 
