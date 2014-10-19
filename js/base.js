@@ -146,10 +146,14 @@ $(function() {
 			$('.google-desktop-img').attr('style', 'background-image: url('+image+');');
 			$('.google-mobile-img').attr('style', 'background-image: url('+image+');');
 			$('.google-desktop-pair .art-bd').attr('style', 'display:block;');
-			$('.google-desktop-pair .google-desktop-text-bd').attr('style', 'margin-left:144px;');			
+			$('.google-mobile-card .art-bd').attr('style', 'display:block;')
+			$('.google-desktop-pair .google-desktop-text-bd').attr('style', 'margin-left:144px;');	
+			$('.google-mobile-card .google-card-mobile-hgroup').attr('style', 'width:182px;');	
 		} else {
 			$('.google-desktop-pair .art-bd').attr('style', 'display:none;');
-			$('.google-desktop-pair .google-desktop-text-bd').attr('style', 'margin-left:0px;');			
+			$('.google-desktop-pair .google-desktop-text-bd').attr('style', 'margin-left:0px;');
+			$('.google-mobile-card .art-bd').attr('style', 'display:none;')
+			$('.google-mobile-card .google-card-mobile-hgroup').attr('style', 'width:auto;');	
 		}
 		$('.google-desktop-title').html(headline);
 		$('.google-mobile-title').html(headline);
