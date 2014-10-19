@@ -5,7 +5,7 @@ $sans: 'Montserrat', sans-serif;
 $serif: 'Rokkitt', serif;
 
 html {
- background-color: #353535;
+ background-color: #fff;
 }
 
 .body {
@@ -67,13 +67,16 @@ html {
 	top: 80px;
 	bottom: 0;
 	overflow: scroll;
+	display: none;
 }
 
 .main-content-mod {
-	margin-left: 350px;
+	// margin-left: 350px;
 	background-color: #f7f7f7;
 	padding: 30px;
 	margin-top: 70px;
+	max-width: 950px;
+	margin: 0 auto;
 }
 .side-nav-title {
 	color: #fff;
@@ -145,10 +148,13 @@ html {
 	display: block;
 }
 
-.preview-title {
+.preview-title-mod {
 	padding: 10px;
 	background: #ddd;
 	margin-bottom: 20px;
+}
+
+.preview-title {
 }
 
 .preview-mod {
