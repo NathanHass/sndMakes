@@ -63,6 +63,18 @@ $(function() {
 		});	
 	});
 
+	$('#title').keydown(function() {
+		title = $(this).val();
+		updateGoogle();
+	});
+	$('#headline').keydown(function() {
+		headline = $(this).val();
+		updateGoogle();
+	});
+	$('#description').keydown(function() {
+		description = $(this).val();
+		updateGoogle();
+	});
 	$('#fbHeadline').keydown(function() {
 		fbHeadline = $(this).val();
 		updateFacebook();
