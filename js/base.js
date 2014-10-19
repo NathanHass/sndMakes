@@ -142,8 +142,15 @@ $(function() {
 	}	
 
 	function updateGoogle() {
-		$('.google-desktop-img').attr('style', 'background-image: url('+image+');');
-		$('.google-mobile-img').attr('style', 'background-image: url('+image+');');
+		if (image != null && image != '') {
+			$('.google-desktop-img').attr('style', 'background-image: url('+image+');');
+			$('.google-mobile-img').attr('style', 'background-image: url('+image+');');
+			$('.google-desktop-pair .art-bd').attr('style', 'display:block;');
+			$('.google-desktop-pair .google-desktop-text-bd').attr('style', 'margin-left:144px;');			
+		} else {
+			$('.google-desktop-pair .art-bd').attr('style', 'display:none;');
+			$('.google-desktop-pair .google-desktop-text-bd').attr('style', 'margin-left:0px;');			
+		}
 		$('.google-desktop-title').html(headline);
 		$('.google-mobile-title').html(headline);
 		$('.google-desktop-source').html(siteName.replace('.com',''));
