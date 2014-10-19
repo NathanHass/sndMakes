@@ -108,14 +108,25 @@ $(function() {
 	}
 
 	function updateTwitter() {
-		var twitterDescriptionDisplay = twitterHeadline;
-		if (twitterDescriptionDisplay.length > 113) {twitterDescriptionDisplay = twitterDescriptionDisplay.substring(0, 113);}
-		$('.twitter-desktop-title').html(twitterDescriptionDisplay+' <a href="'+siteURL+'">'+displayURL.substring(0,27)+'...</a>');
+		var twitterHeadlineDisplay = twitterHeadline;
+		if (twitterHeadlineDisplay.length > 113) {twitterHeadlineDisplay = twitterHeadlineDisplay.substring(0, 113);}
+		$('.twitter-desktop-title').html(twitterHeadlineDisplay+' <a href="'+siteURL+'">'+displayURL.substring(0,27)+'...</a>');
+		if (twitterHeadline.length > 140) {twitterHeadlineDisplay = twitterHeadline.substring(0, 140);} else { twitterHeadlineDisplay = twitterHeadline; }
+		$('.twitter-mobile-card-title').html(twitterHeadlineDisplay);		
 		if (twitterImage != null && twitterImage != '') {			
 			$('.twitter-desktop-img').attr('style', 'background-image: url('+twitterImage+');');
+			$('.twitter-mobile-card-img').attr('style', 'background-image: url('+twitterImage+');');
 		} else {
 			$('.twitter-desktop-img').attr('style', 'height:0px;border:0px;');			
+			$('.twitter-mobile-card-img').attr('style', 'height:0px;border:0px;');			
 		}
+		var twitterDisplaySource = siteName.replace('.com','');
+		$('.twitter-mobile-card-name').html(twitterDisplaySource);
+		$('.twitter-mobile-card-source-name').html(twitterDisplaySource);
+		$('.twitter-mobile-card-source-handle').html(' @'+twitterDisplaySource.replace(' ','').toLowerCase());
+		var twitterDescriptionDisplay = twitterDescription;
+		if (twitterDescriptionDisplay.length > 200) {twitterDescriptionDisplay = twitterDescriptionDisplay.substring(0, 196)+'...';}		
+		$('.twitter-mobile-card-desc').html(twitterDescriptionDisplay);
 	}	
 
 	function updateGoogle() {
