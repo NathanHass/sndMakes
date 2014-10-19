@@ -33,7 +33,7 @@ $(function() {
 					twitterDescription = (data['twitterDescription'] != null) ? twitterDescription = data['twitterDescription'] : twitterDescription = description;
 					twitterImage = (data['twitterImage'] != null) ? twitterImage = data['twitterImage'] : twitterImage = fbImage;
 					googleDescription = (data['eDescription'] != null) ? googleDescription = data['eDescription'] : googleDescription = description;
-					if (googleDescription.length > 140) {googleDescription = googleDescription.substring(0, 140)+'...';}
+					if (googleDescription != null && googleDescription.length > 140) {googleDescription = googleDescription.substring(0, 140)+'...';}
 					if (twitterImage == null) {twitterImage = ''; }
 					if (fbHeadline == null) { fbHeadline = ''; }
 					image = fbImage
@@ -103,10 +103,10 @@ $(function() {
 	function updateFacebook() {
 		$('.facebook-desktop-title').html(fbHeadline);
 		var fbHeadlineDisplay = fbHeadline;
-		if (fbHeadlineDisplay.length > 80) {fbHeadlineDisplay = fbHeadlineDisplay.substring(0, 80)+'...';}
+		if (fbHeadlineDisplay != null && fbHeadlineDisplay.length > 80) {fbHeadlineDisplay = fbHeadlineDisplay.substring(0, 80)+'...';}
 		$('.facebook-mobile-title').html(fbHeadlineDisplay);
 		var fbDescriptionDisplay = fbDescription;
-		if (fbDescription.length > 200) {fbDescriptionDisplay = fbDescription.substring(0, 196)+'...';}
+		if (fbDescriptionDisplay != null && fbDescription.length > 200) {fbDescriptionDisplay = fbDescription.substring(0, 196)+'...';}
 		$('.facebook-desktop-desc').html(fbDescriptionDisplay);
 		$('.facebook-desktop-domain').html(domain.toUpperCase());
 		$('.facebook-mobile-name').html(domain.toLowerCase());
@@ -121,9 +121,9 @@ $(function() {
 
 	function updateTwitter() {
 		var twitterHeadlineDisplay = twitterHeadline;
-		if (twitterHeadlineDisplay.length > 113) {twitterHeadlineDisplay = twitterHeadlineDisplay.substring(0, 113);}
+		if (twitterHeadlineDisplay != null && twitterHeadlineDisplay.length > 113) {twitterHeadlineDisplay = twitterHeadlineDisplay.substring(0, 113);}
 		$('.twitter-desktop-title').html(twitterHeadlineDisplay+' <a href="'+siteURL+'">'+displayURL.substring(0,27)+'...</a>');
-		if (twitterHeadline.length > 140) {twitterHeadlineDisplay = twitterHeadline.substring(0, 140);} else { twitterHeadlineDisplay = twitterHeadline; }
+		if (twitterHeadline != null && twitterHeadline.length > 140) {twitterHeadlineDisplay = twitterHeadline.substring(0, 140);} else { twitterHeadlineDisplay = twitterHeadline; }
 		$('.twitter-mobile-card-title').html(twitterHeadlineDisplay);		
 		if (twitterImage != null && twitterImage != '') {			
 			$('.twitter-desktop-img').attr('style', 'background-image: url('+twitterImage+');');
@@ -137,7 +137,7 @@ $(function() {
 		$('.twitter-mobile-card-source-name').html(twitterDisplaySource);
 		$('.twitter-mobile-card-source-handle').html(' @'+twitterDisplaySource.replace(' ','').toLowerCase());
 		var twitterDescriptionDisplay = twitterDescription;
-		if (twitterDescriptionDisplay.length > 200) {twitterDescriptionDisplay = twitterDescriptionDisplay.substring(0, 196)+'...';}		
+		if (twitterDescriptionDisplay != null && twitterDescriptionDisplay.length > 200) {twitterDescriptionDisplay = twitterDescriptionDisplay.substring(0, 196)+'...';}		
 		$('.twitter-mobile-card-desc').html(twitterDescriptionDisplay);
 	}	
 
