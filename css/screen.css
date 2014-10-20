@@ -307,7 +307,7 @@ button {
 }
 
 html {
-  background-color: #fff;
+  background-color: #f7f7f7;
 }
 
 .body {
@@ -403,8 +403,7 @@ html {
 
 .main-content-mod {
   background-color: #f7f7f7;
-  padding: 30px;
-  margin-top: 70px;
+  padding: 100px 30px 30px;
   max-width: 950px;
   margin: 0 auto;
 }
@@ -503,8 +502,41 @@ html {
 
 .preview-title-mod {
   padding: 10px;
-  background: #ddd;
+  background: #222;
   margin-bottom: 20px;
+}
+
+.preview-title {
+  color: #fff;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.edit-button {
+  border: 0;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  float: right;
+  padding: 5px 11px 2px;
+  line-height: 13px;
+  margin-top: -2px;
+  border-radius: 11px;
+  background: #fff;
+  font-family: "Rokkitt", serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.edit-button:focus {
+  outline: 0;
 }
 
 .preview-mod {

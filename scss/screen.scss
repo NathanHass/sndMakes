@@ -5,7 +5,7 @@ $sans: 'Montserrat', sans-serif;
 $serif: 'Rokkitt', serif;
 
 html {
- background-color: #fff;
+ background-color: #f7f7f7;
 }
 
 .body {
@@ -73,8 +73,7 @@ html {
 .main-content-mod {
 	// margin-left: 350px;
 	background-color: #f7f7f7;
-	padding: 30px;
-	margin-top: 70px;
+	padding: 100px 30px 30px;
 	max-width: 950px;
 	margin: 0 auto;
 }
@@ -150,11 +149,29 @@ html {
 
 .preview-title-mod {
 	padding: 10px;
-	background: #ddd;
+	background: #222;
 	margin-bottom: 20px;
 }
 
 .preview-title {
+	color: #fff;
+	font-weight: 400;
+	display: inline-block;
+}
+
+.edit-button {
+	@include input-default;
+	float: right;
+	padding: 5px 11px 2px;
+	line-height: 13px;
+	margin-top: -2px;
+	border-radius: 11px;
+	background: #fff;
+	font-family: $serif;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
 }
 
 .preview-mod {
