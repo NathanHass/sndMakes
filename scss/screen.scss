@@ -12,6 +12,30 @@ html {
 	font-family: $sans;
 }
 
+// intro
+
+.intro-text-mod {
+	.url-entered & {
+		display: none;
+	}
+}
+
+.logo-placeholder {
+	@include size(350px 100px);
+	background: red;
+	margin: 100px auto 50px;
+}
+
+.intro-text {
+	color: #fff;
+	max-width: 550px;
+	margin: 0 auto 50px;
+	text-align: center;
+	font-family: $serif;
+	font-weight: 400;
+	font-size: em(20);
+}
+
 // topper
 .top-nav {
 	position: fixed;
@@ -19,8 +43,13 @@ html {
 	left: 0;
 	right: 0;
 	height: 70px;
+	bottom:0;
 	background-color: #222;
 	z-index: 1;
+	.url-entered & {
+		@include trans(.8s,all,ease);
+		position: absolute;
+	}
 }
 
 .url-input-mod {
@@ -56,49 +85,18 @@ html {
 }
 
 
-// side nav
-
-.side-nav-mod {
-	width: 350px;
-	// height: 100%;
-	padding: 10px;
-	position: fixed;
-	left: 0;
-	top: 80px;
-	bottom: 0;
-	overflow: scroll;
-	display: none;
-}
-
 .main-content-mod {
 	// margin-left: 350px;
 	background-color: #f7f7f7;
 	padding: 100px 30px 30px;
 	max-width: 800px;
 	margin: 0 auto;
-}
-.side-nav-title {
-	color: #fff;
-	font-size: 14px;
-	margin-bottom: 2px;
-	display: block;
-	font-weight: 400;
-	border-bottom: solid 1px #ddd;
-	margin-bottom: 10px;
-}
-
-.side-nav-title {
-	color: #fff;
-	font-size: 14px;
-	margin-bottom: 2px;
-	display: block;
-	font-weight: 400;
-	border-bottom: solid 1px #ddd;
-	margin-bottom: 10px;
-}
-
-.side-nav-group {
-	margin-bottom: 35px;
+	opacity: 0;
+	@include trans(.5s,all,ease);
+	@include transition-delay(.9s);
+	.url-entered & {
+		opacity: 1;
+	}
 }
 
 // form stuff
@@ -145,11 +143,16 @@ html {
 
 .meta-info-mod {
 	background-color: #333;
-	padding: 10px;
-	display: none;
+	height: 0;
+	overflow: hidden;
+	padding: 0px 10px;
+	opacity: 0;
+	margin-bottom: 20px;
+	@include trans(.4s,all,ease);
 	.is-active & {
-		margin-bottom: 40px;
-		display: block;
+		opacity: 1;
+		padding: 20px 10px;
+		height: 277px;
 	}
 }
 
@@ -163,10 +166,10 @@ html {
 .preview-title-mod {
 	padding: 10px;
 	background: #222;
-	margin-bottom: 40px;
-	.is-active & {
-		margin-bottom: 0;
-	}
+	// margin-bottom: 40px;
+	// .is-active & {
+	// 	margin-bottom: 40px;
+	// }
 }
 
 .preview-title {
@@ -546,4 +549,46 @@ html {
 
 .google-mobile-time {
 	color: rgb(128, 128, 128);
+}
+
+// footer
+//
+
+.footer	{
+	padding: 30px 10px;
+	background: #fff;
+	border-top: solid 1px #ddd;
+}
+
+.footer-width {
+	max-width: 850px;
+	margin: 0 auto;
+}
+
+.footer-title {
+	margin: 30px 0 50px;
+	text-align: center;
+	font-size: 30px;
+}
+
+.people-grid {
+	@include media-grid($num: 5, $pad: 15px, $target:'.person-spot');
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.person-img {
+	width: 100%;
+	border-radius: 50%;
+	max-width: 80px;
+	display: block;
+	margin: 0 auto 10px;
+}
+
+.person-name {
+	margin-bottom: 5px;
+}
+
+.person-handle {
+	color: #bbb;
 }

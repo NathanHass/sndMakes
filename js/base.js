@@ -167,4 +167,16 @@ $(function() {
 		preview_mod.toggleClass('is-active');
 	});
 
+	$('.url-input-btn').on('click', function() {
+		$('.body').addClass('url-entered');
+		$('.top-nav').css({
+			'height': '70px'
+		})
+	});
+
+	var wHeight = $(window).height();
+	console.log(wHeight);
+	$('.top-nav').css({
+		'height': wHeight + 'px'
+	})
 });
