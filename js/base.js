@@ -166,7 +166,7 @@ $(function() {
 		var $this = $(this);
 		var preview_mod = $this.closest('.preview-mod');
 
-		preview_mod.toggleClass('is-active');
+		$('.preview-mod').toggleClass('is-active');
 
 		if(preview_mod.hasClass('is-active')){
 			$this.text('Close Meta Info');

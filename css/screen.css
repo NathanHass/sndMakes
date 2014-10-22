@@ -354,7 +354,7 @@ html {
 .intro-text {
   color: #fff;
   max-width: 600px;
-  margin: 0 auto 70px;
+  margin: 0 auto 40px;
   text-align: center;
   font-family: "brandon-grotesque", serif;
   font-weight: 300;
@@ -483,6 +483,7 @@ html {
 
 .form {
   margin-bottom: 15px;
+  width: 330px;
 }
 
 .textarea {
@@ -503,7 +504,7 @@ html {
   width: 100%;
   font-size: 16px;
   font-family: "brandon-grotesque", serif;
-  height: 40px;
+  height: 100px;
 }
 .textarea:focus {
   outline: 0;
@@ -537,11 +538,14 @@ html {
 
 .meta-info-mod {
   background-color: #333;
-  height: 0;
+  width: 0;
   overflow: hidden;
-  padding: 0px 10px;
+  padding: 60px 10px 10px;
   opacity: 0;
-  margin-bottom: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -549,8 +553,7 @@ html {
 }
 .is-active .meta-info-mod {
   opacity: 1;
-  padding: 20px 10px;
-  height: 277px;
+  width: 350px;
 }
 
 .full-width {
@@ -561,6 +564,7 @@ html {
 .preview-title-mod {
   padding: 10px;
   background: #222;
+  margin-bottom: 40px;
 }
 
 .preview-title {
@@ -604,6 +608,17 @@ html {
   background-color: #fff;
   position: relative;
   padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.preview-mod.is-active {
+  -webkit-transform: translateX(-175px);
+  -moz-transform: translateX(-175px);
+  -ms-transform: translateX(-175px);
+  -o-transform: translateX(-175px);
+  transform: translateX(-175px);
 }
 
 .preview-mod-inner {

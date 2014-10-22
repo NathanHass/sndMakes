@@ -55,7 +55,7 @@ html {
 .intro-text {
 	color: #fff;
 	max-width: 600px;
-	margin: 0 auto 70px;
+	margin: 0 auto 40px;
 	text-align: center;
 	font-family: $serif;
 	font-weight: 300;
@@ -146,6 +146,7 @@ html {
 
 .form {
 	margin-bottom: 15px;
+	width: 330px;
 }
 
 .textarea {
@@ -156,7 +157,7 @@ html {
 	width: 100%;
 	font-size: 16px;
 	font-family: $serif;
-	height: 40px;
+	height: 100px;
 }
 
 .submit-btn {
@@ -176,16 +177,15 @@ html {
 
 .meta-info-mod {
 	background-color: #333;
-	height: 0;
+	width: 0;
 	overflow: hidden;
-	padding: 0px 10px;
+	padding: 60px 10px 10px;
 	opacity: 0;
-	margin-bottom: 20px;
+	@include absolute(0 n 0 100%);
 	@include trans(.4s,all,ease);
 	.is-active & {
 		opacity: 1;
-		padding: 20px 10px;
-		height: 277px;
+		width: 350px;
 	}
 }
 
@@ -199,10 +199,7 @@ html {
 .preview-title-mod {
 	padding: 10px;
 	background: #222;
-	// margin-bottom: 40px;
-	// .is-active & {
-	// 	margin-bottom: 40px;
-	// }
+	margin-bottom: 40px;
 }
 
 .preview-title {
@@ -234,13 +231,10 @@ html {
 	background-color: #fff;
 	position: relative;
 	padding-bottom: 20px;
-	// &.active {
-	// 	&:after {
-	// 		@include psuedo(-1px n -1px -10px);
-	// 		width: 5px;
-	// 		background-color: #f50000;
-	// 	}
-	// }
+	@include trans(.4s,all,ease);
+	&.is-active {
+		@include transform(translateX(-175px));
+	}
 }
 
 .preview-mod-inner {
