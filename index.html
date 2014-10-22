@@ -1,187 +1,198 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>PrePost - Preview Your Content on Social Media</title>
+		<title>PrePost</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type="text/javascript" src="bower_components/modernizr/modernizr.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Rokkitt|Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<script src="//use.typekit.net/ajm4upl.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
 		<link rel="stylesheet" href="css/screen.css">
 	</head>
 
-	<body class="body">
+	<body class="body enter-url">
 		<nav class="top-nav">
+
+		<div class="intro-text-mod">
+			<div class="logo-placeholder">
+				<h1 class="intro-h">PrePost</h1>
+			</div>
+			<p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus nisi recusandae nostrum ab, eligendi eius laborum atque doloremque molestiae, perspiciatis a sequi soluta qui provident. Architecto, sequi eaque rem.</p>
+
+		</div>
+
 			<form class="url-form">
 	            <div class="url-input-mod">
-	            	<input class="url-input" id="urlInput" name="url input" rows="3" placeholder="Enter URL Here"></input><br>
+	            	<input class="url-input" id="urlInput" name="url input" rows="3" placeholder="Paste in Article URL"></input>
 					<button type="submit" class="url-input-btn">Submit</button>
-				</div> <!-- /.input -->
-			</form> <!-- /.form -->
+				</div>
+			</form>
 		</nav>
-		<div class="side-nav-mod">
-			<div class="side-nav-group">
-				<h3 class="side-nav-title">Article Metadata</h3>
-				<form class="form">
-					<div class="form-row">
-			            <label class="form-label" for="textarea">Title</label>
-			            <div class="input-mod">
-			            	<textarea class="textarea" id="title" name="textarea" rows="3" placeholder="title"></textarea><br>
-						</div> <!-- /.input -->
-					</div> <!-- /.form-row -->
-				</form> <!-- /.form -->
-				<form class="form">
-					<div class="form-row">
-			            <label class="form-label" for="textarea">Headline</label>
-			            <div class="input-mod">
-			            	<textarea class="textarea" id="headline" name="textarea" rows="3" placeholder="headline"></textarea><br>
-						</div> <!-- /.input -->
-					</div> <!-- /.form-row -->
-				</form> <!-- /.form -->
-				<form class="form">
-					<div class="form-row">
-			            <label class="form-label" for="textarea">Description</label>
-			            <div class="input-mod">
-			            	<textarea class="textarea" id="description" name="textarea" rows="3" placeholder="description"></textarea><br>
-						</div> <!-- /.input -->
-					</div> <!-- /.form-row -->
-				</form> <!-- /.form -->
+
+		<div class="main-content-mod">
+			<div class="preview-mod">
+				<div class="preview-title-mod">
+					<h3 class="preview-title">Facebook</h3>
+					<button class="edit-button js-edit-trigger">Edit Meta Info</button>
+				</div>
+
+				<div class="meta-info-mod">
+					<form class="form">
+						<div class="form-row">
+				            <label class="form-label" for="textarea">FB Headline</label>
+				            <div class="input-mod">
+				            	<textarea class="textarea" id="fbHeadline" name="textarea" rows="3" placeholder="fbHeadline"></textarea><br>
+							</div>
+						</div>
+					</form>
+					<form class="form">
+						<div class="form-row">
+				            <label class="form-label" for="textarea">FB Description</label>
+				            <div class="input-mod">
+				            	<textarea class="textarea" id="fbDescription" name="textarea" rows="3" placeholder="fbDescription"></textarea><br>
+							</div>
+						</div>
+					</form>
+					<form class="form">
+						<div class="form-row">
+				            <label class="form-label" for="textarea">FB Image</label>
+				            <div class="input-mod">
+				            	<textarea class="textarea" id="fbImage" name="textarea" rows="3" placeholder="fbImage"></textarea><br>
+								<button type="submit" class="submit-btn fb-submit">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<h4 class="device-overline">Desktop</h4>
+				<div class="preview-mod-inner facebook-desktop">
+					<img src="/img/facebook-desktop-head.jpg" class="full-width">
+					<div class="facebook-desktop-card">
+						<div class="facebook-desktop-img"></div>
+						<div class="facebook-desktop-hgroup">
+							<h4 class="facebook-desktop-title">Inject title here</h4>
+							<h5 class="facebook-desktop-desc">Inject sub-title here</h5>
+							<i class="facebook-desktop-domain">Source</i>
+						</div>
+					</div>
+					<img src="/img/facebook-desktop-foot.jpg" class="full-width">
+				</div>
+				<div class="code"></div>
+				<h4 class="device-overline">Mobile</h4>
+				<div class="preview-mod-inner facebook-mobile">
+					<img src="/img/facebook-mobile-head.jpg" class="full-width">
+					<div class="facebook-mobile-card">
+						<div class="facebook-mobile-img"></div>
+						<div class="facebook-mobile-hgroup">
+							<h4 class="facebook-mobile-title">Inject title here</h4>
+							<h5 class="facebook-mobile-name">Source</h5>
+						</div>
+					</div>
+					<img src="/img/facebook-mobile-foot.jpg" class="facebook-mobile-img-footer">
+				</div>
 			</div>
-			<div class="side-nav-group">
-				<h3 class="side-nav-title">Facebook</h3>
-				<form class="form">
-					<div class="form-row">
-			            <label class="form-label" for="textarea">FB Headline</label>
-			            <div class="input-mod">
-			            	<textarea class="textarea" id="fbHeadline" name="textarea" rows="3" placeholder="fbHeadline"></textarea><br>
-						</div> <!-- /.input -->
-					</div> <!-- /.form-row -->
-				</form> <!-- /.form -->
-				<form class="form">
-					<div class="form-row">
-			            <label class="form-label" for="textarea">FB Description</label>
-			            <div class="input-mod">
-			            	<textarea class="textarea" id="fbDescription" name="textarea" rows="3" placeholder="fbDescription"></textarea><br>
-						</div> <!-- /.input -->
-					</div> <!-- /.form-row -->
-				</form> <!-- /.form -->
-				<form class="form">
-					<div class="form-row">
-			            <label class="form-label" for="textarea">FB Image</label>
-			            <div class="input-mod">
-			            	<textarea class="textarea" id="fbImage" name="textarea" rows="3" placeholder="fbImage"></textarea><br>
-							<button type="submit" class="submit-btn fb-submit">Submit</button>
-						</div> <!-- /.input -->
-					</div> <!-- /.form-row -->
-				</form>
-			</div>
-			<div class="side-nav-group">
-				<h3 class="side-nav-title">Twitter</h3>
-				<form class="form">
+			<div class="preview-mod">
+				<div class="preview-title-mod">
+					<h3 class="preview-title">Twitter</h3>
+					<button class="edit-button js-edit-trigger">Edit Meta Info</button>
+				</div>
+
+
+				<div class="meta-info-mod">
+					<form class="form">
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Twitter Headline</label>
 			            <div class="input-mod">
 			            	<textarea class="textarea" id="twitterHeadline" name="textarea" rows="3" placeholder="twitterHeadline"></textarea><br>
-						</div> <!-- /.input -->
-					</div> <!-- /.form-row -->
-				</form> <!-- /.form -->
+						</div>
+					</div>
+				</form>
 				<form class="form">
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Twitter Description</label>
 			            <div class="input-mod">
 			            	<textarea class="textarea" id="twitterDescription" name="textarea" rows="3" placeholder="twitterDescription"></textarea><br>
-						</div> <!-- /.input -->
-					</div> <!-- /.form-row -->
-				</form> <!-- /.form -->
+						</div>
+					</div>
+				</form>
 				<form class="form">
 					<div class="form-row">
 			            <label class="form-label" for="textarea">Twitter Image</label>
 			            <div class="input-mod">
 			            	<textarea class="textarea" id="twitterImage" name="textarea" rows="3" placeholder="twitterImage"></textarea><br>
 							<button type="submit" class="submit-btn twitter-submit">Submit</button>
-						</div> <!-- /.input -->
-					</div> <!-- /.form-row -->
+						</div>
+					</div>
 				</form>
-			</div>
-		</div>
-		<div class="main-content-mod">
-			<div class="preview-mod">
-			<h3 class="preview-title">Facebook Desktop <!-- <i class="preview-type-percentage">00%</i> --></h3>
-				<div class="preview-mod-inner facebook-desktop">
-					<img src="/img/facebook-desktop-head.jpg" class="full-width">
-					<div class="facebook-desktop-card">
-						<div class="facebook-desktop-img" style="background-image: url(http://placekitten.com/470/276);"></div>
-						<div class="facebook-desktop-hgroup">
-							<h4 class="facebook-desktop-title">Inject title here</h4>
-							<h5 class="facebook-desktop-desc">Inject sub-title here</h5>
-							<i class="facebook-desktop-domain">www.huffingtonpost.com</i>
-						</div>
+				</div>
+
+				<h4 class="device-overline">Desktop</h4>
+				<div class="preview-mod-inner twitter-desktop">
+					<div class="twitter-desktop-inner">
+						<h5 class="twitter-desktop-name">Source<span class="twitter-desktop-handle">@Source &#149; 1h</span></h5>
+						<h4 class="twitter-desktop-title">Inject title here <a href="#">http://bit.ly/1r4RolK </a></h4>
+						<div class="twitter-desktop-img" ></div>
 					</div>
-					<img src="/img/facebook-desktop-foot.jpg" class="full-width">
+					<img src="/img/twitter-desktop-foot.jpg" class="full-width">
 				</div>
-			</div>
-			<div class="preview-mod preview-mod-facebook-mobile">
-				<h3 class="preview-title">Facebook Mobile <!-- <i class="preview-type-percentage">00%</i> --></h3>
-				<div class="preview-mod-inner facebook-mobile">
-					<img src="/img/facebook-mobile-head.jpg" class="full-width">
-					<div class="facebook-mobile-card">
-						<div class="facebook-mobile-img" style="background-image: url(http://placekitten.com/280/146);"></div>
-						<div class="facebook-mobile-hgroup">
-							<h4 class="facebook-mobile-title">Man Plants Forrest Bigger than Central Park to Save His Island</h4>
-							<h5 class="facebook-mobile-name">nytimes.com</h5>
-						</div>
-					</div>
-					<img src="/img/facebook-mobile-foot.jpg" class="facebook-mobile-img-footer">
-				</div>
-			</div>
-			<!-- <div class="preview-mod">
-				<h3 class="preview-title">Twitter Mobile Timeline <i class="preview-type-percentage">00%</i> </h3>
-				<div class="preview-mod-inner twitter-mobile-tl">
-					<h4 class="twitter-mobile-tl-title">Inject title here</h4>
-					<h5 class="twitter-mobile-tl-desc">Inject sub-title here</h5>
-					<img src="http://placekitten.com/g/200/300" class="twitter-mobile-tl-img">
-				</div>
-			</div>-->
-			<div class="preview-mod">
-				<h3 class="preview-title">Twitter Mobile Card <!-- <i class="preview-type-percentage">00%</i> --></h3>
+				<h4 class="device-overline">Mobile</h4>
 				<div class="preview-mod-inner twitter-mobile-card">
 					<div class="twitter-mobile-card-inner">
 						<div class="twitter-mobile-card-name-hgroup"><span class="twitter-mobile-card-avatar"></span><span class="twitter-mobile-card-name">CSS</span> </div>
-						<div class="twitter-mobile-card-img" style="background-image: url(http://placekitten.com/g/300/141);"></div>
+						<div class="twitter-mobile-card-img" ></div>
 						<h4 class="twitter-mobile-card-title">Inject title here</h4>
-						<h5 class="twitter-mobile-card-source">by <span class="twitter-mobile-card-source-name">So and so </span><span class="twitter-mobile-card-source-handle">@soandso</span></h5>
+						<h5 class="twitter-mobile-card-source">by <span class="twitter-mobile-card-source-name">Source </span><span class="twitter-mobile-card-source-handle">@Source</span></h5>
 						<h5 class="twitter-mobile-card-desc">Inject description here</h5>
 					<img src="/img/twitter-mobile-card-foot.jpg" class="full-width">
 					</div>
 				</div>
 			</div>
-			<div class="preview-mod preview-mod-twitter">
-				<h3 class="preview-title">Twitter Desktop <!-- <i class="preview-type-percentage">00%</i> --></h3>
-				<div class="preview-mod-inner twitter-desktop">
-					<div class="twitter-desktop-inner">
-						<h5 class="twitter-desktop-name">Your Name<span class="twitter-desktop-handle">@yourhandle &#149; 1h</span></h5>
-						<h4 class="twitter-desktop-title">Inject title here <a href="#">http://bit.ly/1r4RolK </a></h4>
-						<div class="twitter-desktop-img" style="background-image: url(http://placekitten.com/526/330);"></div>
-					</div>
-					<img src="/img/twitter-desktop-foot.jpg" class="full-width">
-				</div>
-			</div>
 			<div class="preview-mod">
-				<h3 class="preview-title">Google Desktop <!-- <i class="preview-type-percentage">00%</i> --></h3>
-				<div class="preview-mod-inner google-desktop">
+				<div class="preview-title-mod">
+					<h3 class="preview-title">Google</h3>
+					<button class="edit-button js-edit-trigger">Edit Meta Info</button>
+				</div>
 
+				<div class="meta-info-mod">
+					<form class="form">
+						<div class="form-row">
+				            <label class="form-label" for="textarea">Title</label>
+				            <div class="input-mod">
+				            	<textarea class="textarea" id="title" name="textarea" rows="3" placeholder="title"></textarea><br>
+							</div>
+						</div>
+					</form>
+					<form class="form">
+						<div class="form-row">
+				            <label class="form-label" for="textarea">Headline</label>
+				            <div class="input-mod">
+				            	<textarea class="textarea" id="headline" name="textarea" rows="3" placeholder="headline"></textarea><br>
+							</div>
+						</div>
+					</form>
+					<form class="form">
+						<div class="form-row">
+				            <label class="form-label" for="textarea">Description</label>
+				            <div class="input-mod">
+				            	<textarea class="textarea" id="description" name="textarea" rows="3" placeholder="description"></textarea><br>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<h4 class="device-overline">Desktop</h4>
+				<div class="preview-mod-inner google-desktop">
 					<article class="google-desktop-pair">
 						<div class="art-bd">
-							<div class="art google-desktop-img" style="background-image: url(http://placekitten.com/g/134/100);"></div>
+							<div class="art google-desktop-img" ></div>
 						</div> <!-- /art-bd -->
 						<div class="txt-bd google-desktop-text-bd">
 							<h4 class="google-desktop-title">Inject title here</h4>
-							<h6 class="google-desktop-name"><span class="google-desktop-source">Buzzfeed</span> <span class="google-desktop-time">- 3 hours ago</span> </h6>
-							<h5 class="google-desktop-desc">The fact that stock markets in Europe are in rally mode after a horrific week also added to the ...</h5>
+							<h6 class="google-desktop-name"><span class="google-desktop-source">Source</span> <span class="google-desktop-time">- 3 hours ago</span> </h6>
+							<h5 class="google-desktop-desc">Inject description here...</h5>
 						</div> <!-- /txt-bd -->
 					</article> <!-- /l-pair -->
 				</div>
-			</div>
-			<div class="preview-mod google-mobile-preview">
-				<h3 class="preview-title">Google Mobile <!-- <i class="preview-type-percentage">00%</i> --></h3>
+				<h4 class="device-overline">Mobile</h4>
 				<div class="preview-mod-inner google-mobile">
 					<div class="google-mobile-card">
 						<div class="text-bd google-card-mobile-hgroup">
@@ -189,13 +200,46 @@
 							<h5 class="google-mobile-source"><span class="google-mobile-name">Inject sub-title here</span><span class="google-mobile-time"> - 3 days ago</span>  </h5>
 						</div>
 						<div class="art-bd">
-							<div class="google-mobile-img art" style="background-image: url(http://placekitten.com/116/156);"></div>
+							<div class="google-mobile-img art"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 
 		</div>
+		<footer class="footer">
+			<div class="footer-width">
+				<h3 class="footer-title">Prepost was made by</h3>
+				<div class="people-grid">
+					<a href="https://twitter.com/whichlight" class="person-spot">
+						<img src="https://pbs.twimg.com/profile_images/458972525670567936/z1g3Xy_h.jpeg" class="person-img">
+						<h6 class="person-name">Kawandeep Virdee</h6>
+						<span class="person-handle" target="_blank">@whichlight</span>
+					</a>
+					<a href="https://twitter.com/christhorman" class="person-spot">
+						<img src="https://pbs.twimg.com/profile_images/505739233894887424/KCJXiH-9.jpeg" class="person-img">
+						<h6 class="person-name">Chris Thorman</h6>
+						<span class="person-handle" target="_blank">@christhorman</span>
+					</a>
+					<a href="https://twitter.com/dheerja" class="person-spot">
+						<img src="https://pbs.twimg.com/profile_images/477223351518121984/kOUxTn-Z.jpeg" class="person-img">
+						<h6 class="person-name">Dheerja Kaur</h6>
+						<span class="person-handle" target="_blank">@dheerja</span>
+					</a>
+					<a href="https://twitter.com/natronic" class="person-spot">
+						<img src="https://pbs.twimg.com/profile_images/463841926295216129/CIuij0lI.jpeg" class="person-img">
+						<h6 class="person-name">Nathan Hass</h6>
+						<span class="person-handle" target="_blank">@natronic</span>
+					</a>
+					<a href="https://twitter.com/FinkTweets" class="person-spot">
+						<img src="https://pbs.twimg.com/profile_images/520658280197001216/sQmxVKrE.jpeg" class="person-img">
+						<h6 class="person-name">Fink Densford</h6>
+						<span class="person-handle" target="_blank">@FinkTweets</span>
+					</a>
+				</div>
+				<h3 class="footer-title">At <a target="_blank" href="http://www.snd.org/2014/10/meet-the-news-nerds-tackling-content-creation-at-sndmakes/">SND Makes: Boston</a>, an Event Hosted by <a target="_blank" href="http://upstatement.com/">Upstatement</a></h3>
+			</div>
+		</footer>
 	</body>
 
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
