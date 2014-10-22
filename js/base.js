@@ -163,11 +163,22 @@ $(function() {
 	}
 
 	$('.js-edit-trigger').on('click', function() {
-		var preview_mod = $(this).closest('.preview-mod');
+		var $this = $(this);
+		var preview_mod = $this.closest('.preview-mod');
+
 		preview_mod.toggleClass('is-active');
+
+		if(preview_mod.hasClass('is-active')){
+			$this.text('Close Meta Info');
+		} else {
+			$this.text('Edit Meta Info');
+		}
 	});
 
 	$('.url-input-btn').on('click', function() {
+
+		$('body').scrollTop(0);
+
 		$('.body').addClass('url-entered');
 		$('.top-nav').css({
 			'height': '70px'
