@@ -158,6 +158,6 @@ var app = require('http').createServer(function (req, res) {
       fileServer.serve(req, res);
     }).resume();
   }
-}).listen(8000);
+}).listen(process.env.PORT || 8000);
 
 
