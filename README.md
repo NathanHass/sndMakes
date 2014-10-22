@@ -7,16 +7,14 @@
 2. npm modules (_this is the manual way, should add package.json to handle_)
 
         npm install node-static
-        npm install jsdom
         npm install cheerio
         npm install request
         npm install embedly
-        npm install bower
 
 2. compass
 
         gem install compass
-        
+
 3. bower
 
         npm install bower
