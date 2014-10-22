@@ -1,0 +1,33 @@
+{
+  "name": "prepost",
+  "version": "1.0.0",
+  "description": "Generate article previews for social media",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NathanHass/sndMakes.git"
+  },
+  "keywords": [
+    "publishing",
+    "news",
+    "social",
+    "media",
+    "cards"
+  ],
+  "author": "@whichlight @nathanhass @dheerja @finktweets @christhorman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NathanHass/sndMakes/issues"
+  },
+  "homepage": "https://github.com/NathanHass/sndMakes",
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "embedly": "^1.0.2",
+    "node-static": "^0.7.6",
+    "request": "^2.45.0"
+  }
+}
