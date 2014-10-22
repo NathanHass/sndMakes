@@ -79,7 +79,7 @@ var parseURL = function(testUrl, res){
 
       //embedly
 
-      new embedly({key: 'e2dcb7bae5a443bfbb5f726daf05549f'}, function(err, api) {
+      new embedly({key: '540b263b64dd45e2bfa8e6741c3dfc6a'}, function(err, api) {
         if (!!err) {
           console.error('Error creating Embedly api');
           console.error(err.stack, api);
