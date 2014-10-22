@@ -183,6 +183,7 @@ html {
 	opacity: 0;
 	@include absolute(0 n 0 100%);
 	@include trans(.4s,all,ease);
+	@include transform(translate3d(0,0,0));
 	.is-active & {
 		opacity: 1;
 		width: 350px;
