@@ -4,10 +4,26 @@
 #### What you need to get going... _I think_
 
 1. npm
+2. npm modules (_this is the manual way, should add package.json to handle_)
+
+        npm install node-static
+        npm install jsdom
+        npm install cheerio
+        npm install request
+        npm install embedly
+        npm install bower
+
 2. compass
- - run `gem install compass`
+
+        gem install compass
+        
+3. bower
+
+        npm install bower
+        bower install
 
 #### Server stuff
 
-1. Run node server.js, listen on localhost:8000
+1. Run `node server.js`
+2. Open browser to http://localhost:8000
 2. API to get the metadata is /url=YOUR-URL
