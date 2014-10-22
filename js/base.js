@@ -162,27 +162,9 @@ $(function() {
 		$('.google-desktop-desc').html(googleDescription);
 	}
 
-	// added by nathan
-	var root = "http://localhost:8000/";
-	if (Modernizr.history) {
-    // history is supported; do magical things
-    // console.log('History supported');
-
-    // hijack the nav click event
-    $('.url-input-btn').on('click', function() {
-
-        console.log(siteURL);
-        // change the url without a page refresh and add a history entry.
-        history.pushState(null, '', root + '?url='+ siteURL);
-
-        // load the content
-        // loadContent(_href); // fear not! we're going to build this function in the next code block
-
-    });
-
-	} else {
-	    // history is not supported; nothing fancy here
-	}
-
+	$('.js-edit-trigger').on('click', function() {
+		var preview_mod = $(this).closest('.preview-mod');
+		preview_mod.toggleClass('is-active');
+	});
 
 });

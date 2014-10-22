@@ -74,7 +74,7 @@ html {
 	// margin-left: 350px;
 	background-color: #f7f7f7;
 	padding: 100px 30px 30px;
-	max-width: 950px;
+	max-width: 800px;
 	margin: 0 auto;
 }
 .side-nav-title {
@@ -125,6 +125,7 @@ html {
 	width: 100%;
 	font-size: 16px;
 	font-family: $serif;
+	height: 40px;
 }
 
 .submit-btn {
@@ -140,6 +141,18 @@ html {
 	}
 }
 
+// meta info mod
+
+.meta-info-mod {
+	background-color: #333;
+	padding: 10px;
+	display: none;
+	.is-active & {
+		margin-bottom: 40px;
+		display: block;
+	}
+}
+
 // content types
 
 .full-width {
@@ -150,7 +163,10 @@ html {
 .preview-title-mod {
 	padding: 10px;
 	background: #222;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
+	.is-active & {
+		margin-bottom: 0;
+	}
 }
 
 .preview-title {
@@ -190,7 +206,19 @@ html {
 }
 
 .preview-mod-inner {
-	margin: 0 auto;
+	margin: 0 auto 40px;
+}
+
+.device-overline {
+	// text-align: center;
+	font-weight: 400;
+	font-size: 12px;
+	border-bottom: solid 1px #ddd;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+	margin: 0 25px 35px;
+	padding: 0 0 2px 5px;
 }
 
 .facebook-desktop {
