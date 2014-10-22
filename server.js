@@ -1,9 +1,8 @@
 var server = require('node-static');
 var url = require('url');
-var jsdom = require("jsdom");
 var cheerio = require('cheerio');
 var request = require('request');
-var request =  request.defaults({ jar: request.jar() }); //some weird request bug
+request =  request.defaults({ jar: request.jar() }); //some weird request bug
 var embedly = require('embedly');
 var util = require('util');
 
@@ -79,7 +78,7 @@ var parseURL = function(testUrl, res){
 
       //embedly
 
-      new embedly({key: 'e2dcb7bae5a443bfbb5f726daf05549f'}, function(err, api) {
+      new embedly({key: '540b263b64dd45e2bfa8e6741c3dfc6a'}, function(err, api) {
         if (!!err) {
           console.error('Error creating Embedly api');
           console.error(err.stack, api);
@@ -146,7 +145,6 @@ var parseURL = function(testUrl, res){
 var app = require('http').createServer(function (req, res) {
 
   query = url.parse(req.url, true).query;
-  console.log(query.url);
 
 
   //parse url
@@ -160,6 +158,6 @@ var app = require('http').createServer(function (req, res) {
       fileServer.serve(req, res);
     }).resume();
   }
-}).listen(8000);
+}).listen(process.env.PORT || 8000);
 
 
