@@ -1,5 +1,9 @@
 .sass-cache
+bower_components/Upbase
+bower_components/jquery/src
+bower_components/modernizr/test
+bower_components/modernizr/media
+bower_components/modernizr/feature-detects
 components
 node_modules
 .DS_Store
-bower_components
