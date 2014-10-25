@@ -63,27 +63,27 @@ $(function() {
 		});
 	});
 
-	$('#title').keydown(function() {
+	$('#title').keyup(function() {
 		title = $(this).val();
 		updateGoogle();
 	});
-	$('#headline').keydown(function() {
+	$('#headline').keyup(function() {
 		headline = $(this).val();
 		updateGoogle();
 	});
-	$('#description').keydown(function() {
+	$('#description').keyup(function() {
 		description = $(this).val();
 		updateGoogle();
 	});
-	$('#fbHeadline').keydown(function() {
+	$('#fbHeadline').keyup(function() {
 		fbHeadline = $(this).val();
 		updateFacebook();
 	});
-	$('#fbDescription').keydown(function() {
+	$('#fbDescription').keyup(function() {
 		fbDescription = $(this).val();
 		updateFacebook();
 	});
-	$('#twitterHeadline').keydown(function() {
+	$('#twitterHeadline').keyup(function() {
 		twitterHeadline = $(this).val();
 		updateTwitter();
 	});
@@ -117,17 +117,23 @@ $(function() {
 			$('.facebook-desktop-img').attr('style', 'height:0px;border:0px;');
 			$('.facebook-mobile-img').attr('style', 'height:0px;border:0px;');
 		}
+		$('.bottom-facebook-title').html(fbHeadlineDisplay);
+		$('.bottom-facebook-desc').html(fbDescriptionDisplay);
+		$('.bottom-facebook-img').html(fbImage);
 	}
 
 	function updateTwitter() {
 		var twitterHeadlineDisplay = twitterHeadline;
 		if (twitterHeadlineDisplay != null && twitterHeadlineDisplay.length > 113) {twitterHeadlineDisplay = twitterHeadlineDisplay.substring(0, 113);}
-		$('.twitter-desktop-title').html(twitterHeadlineDisplay+' <a href="'+siteURL+'">'+displayURL.substring(0,27)+'...</a>');
+		$('.twitter-desktop-title').html(twitterHeadlineDisplay+' <a href="'+siteURL+'">'+siteURL.substring(0,27)+'...</a>');
 		if (twitterHeadline != null && twitterHeadline.length > 140) {twitterHeadlineDisplay = twitterHeadline.substring(0, 140);} else { twitterHeadlineDisplay = twitterHeadline; }
 		$('.twitter-mobile-card-title').html(twitterHeadlineDisplay);
+		$('.bottom-twitter-title').html(twitterHeadlineDisplay);
+		$('.bottom-twitter-tag').html(twitterHeadlineDisplay);
 		if (twitterImage != null && twitterImage != '') {
 			$('.twitter-desktop-img').attr('style', 'background-image: url('+twitterImage+');');
 			$('.twitter-mobile-card-img').attr('style', 'background-image: url('+twitterImage+');');
+
 		} else {
 			$('.twitter-desktop-img').attr('style', 'height:0px;border:0px;');
 			$('.twitter-mobile-card-img').attr('style', 'height:0px;border:0px;');
@@ -139,6 +145,8 @@ $(function() {
 		var twitterDescriptionDisplay = twitterDescription;
 		if (twitterDescriptionDisplay != null && twitterDescriptionDisplay.length > 200) {twitterDescriptionDisplay = twitterDescriptionDisplay.substring(0, 196)+'...';}
 		$('.twitter-mobile-card-desc').html(twitterDescriptionDisplay);
+		$('.bottom-twitter-desc').html(twitterDescriptionDisplay);
+		$('.bottom-twitter-img').html(twitterImage);
 	}
 
 	function updateGoogle() {
@@ -190,4 +198,45 @@ $(function() {
 	$('.top-nav').css({
 		'height': wHeight + 'px'
 	})
+
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = (target.length) ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: (target.offset().top  - 70)
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+
+	var previousScroll = 0,
+    headerOrgOffset = $('.top-nav').height();
+
+	$('.top-nav').height($('.top-nav').height());
+
+	$("#urlInput").on("paste", function () {
+		setTimeout(function() {
+			$('[name=submit]').trigger('click')
+		});
+	});
+
+	// $(window).scroll(function () {
+	//     var currentScroll = $(this).scrollTop();
+	//     if (currentScroll > headerOrgOffset) {
+	//         if (currentScroll > previousScroll) {
+	//             $('.top-nav').addClass('is-small');
+	//         } else {
+	//             $('.top-nav').removeClass('is-small');
+	//         }
+	//     } else {
+	//             $('.top-nav').removeClass('is-small');
+	//     }
+	//     previousScroll = currentScroll;
+	// });
+
 });

@@ -3,6 +3,7 @@
 	<head>
 		<title>PrePost</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 		<script type="text/javascript" src="libs/modernizr.js"></script>
 		<script src="//use.typekit.net/ajm4upl.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>
@@ -16,22 +17,23 @@
 	<body class="body enter-url">
 		<nav class="top-nav">
 
-		<div class="intro-text-mod">
-			<div class="logo-placeholder">
-				<h1 class="intro-h">PrePost</h1>
+			<div class="intro-text-mod">
+				<div class="logo-placeholder">
+					<h1 class="intro-h">PrePost</h1>
+				</div>
+				<p class="intro-text">
+					<!--Streamlining the process of social media publication.  PrePost allows publishers, producers and users to see exactly how their media will be consumed on the top social media platforms, and allows them to modify it for maximum impact.-->
+					<span>Maximize your social impact. </span>Enter a link below to view your content across Facebook, Twitter, and Google.
+				</p>
 			</div>
-			<p class="intro-text">
-				<!--Streamlining the process of social media publication.  PrePost allows publishers, producers and users to see exactly how their media will be consumed on the top social media platforms, and allows them to modify it for maximum impact.-->
-				Maximize your social impact.<br><br>Enter a link below to view your content across Facebook, Twitter, and Google.
-			</p>
-		</div>
 
 			<form class="url-form">
 	            <div class="url-input-mod">
-	            	<input class="url-input" id="urlInput" name="url input" rows="3" placeholder="Your Link"></input>
-					<button type="submit" class="url-input-btn">Preview</button>
+	            	<input class="url-input" id="urlInput" name="url =input" rows="3" placeholder="Your Link"></input>
+					<button type="submit" name="submit" class="url-input-btn">Preview</button>
 				</div>
 			</form>
+			<a class="suggest-tags-link" href="#copy-tags-mod">Copy Meta Tags</a>
 		</nav>
 
 		<div class="main-content-mod">
@@ -155,10 +157,10 @@
 			<div class="preview-mod">
 				<div class="preview-title-mod">
 					<h3 class="preview-title">Google</h3>
-					<button class="edit-button js-edit-trigger">Edit Meta Info</button>
+					<!-- <button class="edit-button js-edit-trigger">Edit Meta Info</button> -->
 				</div>
 
-				<div class="meta-info-mod">
+				<!-- <div class="meta-info-mod">
 					<form class="form">
 						<div class="form-row">
 				            <label class="form-label" for="textarea">Title</label>
@@ -183,7 +185,7 @@
 							</div>
 						</div>
 					</form>
-				</div>
+				</div> -->
 
 				<h4 class="device-overline">Desktop</h4>
 				<div class="preview-mod-inner google-desktop">
@@ -212,6 +214,19 @@
 				</div>
 			</div>
 
+		</div>
+		<div class="copy-tags-mod" id="copy-tags-mod">
+			<h3 class="footer-title">Add these tags to your site!</h3>
+			<div class="copy-tags-width">
+				<pre class="prettyprint lang-html">
+					<p class="meta-tag-block">&#60;meta property="og:title" content="<span class="bottom-facebook-title" >Insert Title Here</span>" /&#62;</p>
+					<p class="meta-tag-block">&#60;meta property="og:description" content="<span class="bottom-facebook-desc" >Insert Title Here</span>" /&#62;</p>
+					<p class="meta-tag-block">&#60;meta property="og:image" content="<span class="bottom-facebook-img" >Insert Title Here</span>" /&#62;</p>
+					<p class="meta-tag-block">&#60;meta name="twitter:title" content="<span class="bottom-twitter-title" >Insert Title Here</span>" /&#62;</p>
+					<p class="meta-tag-block">&#60;meta name="twitter:description" content="<span class="bottom-twitter-desc" >Insert Title Here</span>" /&#62;</p>
+					<p class="meta-tag-block">&#60;meta name="twitter:image:src" content="<span class="bottom-twitter-img" >Insert Title Here</span>" /&#62;</p>
+				</pre>
+			</div>
 		</div>
 		<footer class="footer">
 			<div class="footer-width">

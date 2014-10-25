@@ -361,6 +361,11 @@ html {
   font-size: 1.84615em;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
+.intro-text span {
+  font-size: 1.4em;
+  display: block;
+  margin-bottom: 15px;
+}
 
 .top-nav {
   position: fixed;
@@ -378,11 +383,10 @@ html {
   -moz-transition: all 0.8s ease;
   -o-transition: all 0.8s ease;
   transition: all 0.8s ease;
-  position: absolute;
 }
 
 .url-input-mod {
-  max-width: 740px;
+  max-width: 640px;
   margin: 0 auto;
   height: 50px;
   position: relative;
@@ -455,7 +459,7 @@ html {
 .main-content-mod {
   background-color: #f7f7f7;
   padding: 100px 30px 30px;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   opacity: 0;
   -webkit-transition: all 0.5s ease;
@@ -469,6 +473,55 @@ html {
 }
 .url-entered .main-content-mod {
   opacity: 1;
+}
+
+.suggest-tags-link {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 50px;
+  line-height: 49px;
+  padding: 0 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #125951;
+  color: #fff;
+  font-family: "brandon-grotesque", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.url-entered .suggest-tags-link {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.copy-tags-mod {
+  text-align: left;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.copy-tags-width {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.meta-tag-block {
+  font-family: monospace;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 140%;
 }
 
 .form-label {
@@ -624,6 +677,14 @@ html {
   -ms-transform: translateX(-175px);
   -o-transform: translateX(-175px);
   transform: translateX(-175px);
+}
+
+.preview-mod.is-active:last-child {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
 }
 
 .preview-mod-inner {
@@ -1029,6 +1090,10 @@ html {
   color: gray;
 }
 
+.copy-tags-mod {
+  background: #0E2825;
+}
+
 .footer {
   padding: 30px 10px;
   background: #fff;
@@ -1107,4 +1172,28 @@ html {
 
 .person-handle {
   color: #bbb;
+}
+
+pre.prettyprint {
+  border: 0px;
+}
+
+.tag {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.atn {
+  color: #54BDB0;
+}
+
+.pun {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.atv {
+  color: #59b1cb;
+}
+
+.pln {
+  color: rgba(255, 255, 255, 0.8);
 }
