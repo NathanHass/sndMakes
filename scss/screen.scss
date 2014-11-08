@@ -31,9 +31,16 @@ html {
 
 // intro
 
-.intro-text-mod {
+.intro-text {
 	.url-entered & {
 		display: none;
+	}
+}
+
+.intro-text-mod {
+	.url-entered & {
+		position: relative;
+		float: left;
 	}
 }
 
@@ -41,6 +48,12 @@ html {
 	// @include size(350px 100px);
 	// background: red;
 	margin: 150px auto 10px;
+	.url-entered & {
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin: 4px 0 0;
+	}
 }
 
 .intro-h {
@@ -50,6 +63,10 @@ html {
 	text-align: center;
 	color: #fff;
 	@include text-shadow(1px 1px 1px rgba(0,0,0,.1));
+	.url-entered & {
+		font-size: em(32);
+		font-weight: 400;
+	}
 
 }
 

@@ -335,12 +335,23 @@ html {
   background: #f7f7f7;
 }
 
-.url-entered .intro-text-mod {
+.url-entered .intro-text {
   display: none;
+}
+
+.url-entered .intro-text-mod {
+  position: relative;
+  float: left;
 }
 
 .logo-placeholder {
   margin: 150px auto 10px;
+}
+.url-entered .logo-placeholder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 4px 0 0;
 }
 
 .intro-h {
@@ -350,6 +361,10 @@ html {
   text-align: center;
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.url-entered .intro-h {
+  font-size: 2.46154em;
+  font-weight: 400;
 }
 
 .intro-text {
