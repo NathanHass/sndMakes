@@ -367,6 +367,11 @@ html {
   font-weight: 400;
 }
 
+.intro-link {
+  text-decoration: none;
+  color: #fff;
+}
+
 .intro-text {
   color: #fff;
   max-width: 600px;
