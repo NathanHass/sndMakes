@@ -324,6 +324,7 @@ a:link {
 
 html {
   background-color: #f7f7f7;
+  min-width: 1000px;
 }
 
 .body {
@@ -368,7 +369,7 @@ html {
 }
 
 .top-nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;

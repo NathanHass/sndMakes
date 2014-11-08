@@ -9,6 +9,8 @@ $(function() {
 
 	$('.url-input-btn').click(function(e) {
 
+		// console.log($('#urlInput').val());
+
 		e.preventDefault();
 
 		siteURL = $('.url-input').val();
@@ -224,6 +226,82 @@ $(function() {
 			$('[name=submit]').trigger('click')
 		});
 	});
+
+
+	var root = "http://www.prepost.me/";
+
+	if (Modernizr.history) {
+		// history is supported; do magical things
+		// console.log('History supported');
+
+		// hijack the nav click event
+		$(".url-input-btn").on("click", function(e) {
+			e.preventDefault();
+			// _href = $("#urlInput").val();
+
+			// change the url without a page refresh and add a history entry.
+			history.pushState(null, '', root + '?site=' + siteURL);
+
+			// load the content
+			// loadContent(siteURL); // fear not! we're going to build this function in the next code block
+
+		});
+
+	} else {
+	    // history is not supported; nothing fancy here
+	}
+
+	function getUrlVars() {
+		var vars = [], hash;
+		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		for(var i = 0; i < hashes.length; i++)
+			{
+			    hash = hashes[i].split('=');
+			    vars.push(hash[0]);
+			    vars[hash[0]] = hash[1];
+			}
+		console.log(vars.site);
+		console.log(vars.site != undefined);
+		if (vars.site != undefined) {
+			$('.url-input').val(vars.site);
+			$('[name=submit]').trigger('click')
+		}
+	}
+	getUrlVars();
+
+
+	$(window).bind("popstate", function() {
+		// link = location.pathname.replace(/^.*[\\/]/, ""); // get filename only
+		link = location.pathname; // get filename only
+		console.log(link);
+	});
+
+	// function loadContent(href) {
+
+	//   if (href.charAt(0) == "/") {
+	//     href = href.substring(1);
+	//   }
+
+	//   $mainContent
+	//     .find("#detail-mod")
+	//     .fadeOut(500, function() { // fade out the content of the current page
+	//       $mainContent
+	//         .load(root + href + "#detail-mod", function() { // load the contents of whatever href is
+	//           $mainContent.find("#detail-mod").fadeIn(2000, function(){
+	//               $('html, body').animate({
+	//                   scrollTop: $("#detail-mod").offset().top
+	//               }, 750);
+	//               document.title = $('#detail-mod').data('page') + " | Dan Vlahos Design";
+	//               ga('send', 'pageview', href);
+
+	//           });
+	//          });
+	//       // $("nav a").removeClass("current");
+	//       // $("nav a[href$='" + href + "']").addClass("current");
+	//     });
+
+	// }//eo loadContent
+
 
 	// $(window).scroll(function () {
 	//     var currentScroll = $(this).scrollTop();
