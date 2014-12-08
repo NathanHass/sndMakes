@@ -24,6 +24,7 @@ html {
 .body {
 	font-family: $sans;
 	background-color: $spot;
+	position: relative;
 	&.url-entered {
 		background:  #f7f7f7;
 	}
@@ -92,16 +93,20 @@ html {
 
 // topper
 .top-nav {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
-	right: 0;
+	width: 100%;
 	height: 70px;
 	bottom:0;
 	background-color: $spot;
 	z-index: 1;
 	padding: 10px 30px;
 	.url-entered & {
+		min-width: 1000px;
+		position: absolute;
+		right: 0;
+		width: auto;
 		@include trans(.8s,all,ease);
 	}
 }
